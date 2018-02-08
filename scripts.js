@@ -135,7 +135,6 @@ aiPersonality.outcomes = {
 
 // The different final outcome paragraphs will be displayed as 
 // they are related directly with the final number of each attribute.
-
 aiPersonality.finalOutcome = function (attNum, outcomeText, attributeOutcome) {
    if (aiPersonality[attNum] === 0) {
       $(outcomeText).append(aiPersonality.outcomes[attributeOutcome].Outcome_0).addClass('outcomeTransition');
@@ -148,7 +147,7 @@ aiPersonality.finalOutcome = function (attNum, outcomeText, attributeOutcome) {
    } else if (aiPersonality[attNum] === 4) {
       $(outcomeText).append(aiPersonality.outcomes[attributeOutcome].Outcome_4).addClass('outcomeTransition');
    } else {
-      console.log('nothing happening with attribute 1');
+      console.log('nothing happens');
    };
 }
 
@@ -198,3 +197,6 @@ $(function() {
 // If choice A has already been chosen, and choice B is chosen, then a different (differing from choice B's normal effect) AI response and personality change will be made.
 
 //Typed Text for AI's responses.
+
+//Pre-game page with instructions.
+//Transition page before seeing your outcome.

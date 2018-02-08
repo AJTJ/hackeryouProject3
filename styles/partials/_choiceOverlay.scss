@@ -1,0 +1,30 @@
+.choiceOverlay {
+   visibility: hidden;
+   opacity: 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: rgba(0,0,0,0.3);
+   transition: all 0.5s;
+
+   div {
+      display: flex;
+      position: relative;
+      justify-content: space-around;
+      align-items: center;
+      background: white;
+      min-width: 400px;
+      min-height: 300px;
+
+      .closeX {
+         position: absolute;
+         top: 5px;
+         right: 5px;
+      }
+   }
+}

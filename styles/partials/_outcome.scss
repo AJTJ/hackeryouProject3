@@ -12,14 +12,22 @@
    left: 0;
    background: black;
    transition: all 0.5s;
-   padding: 30px;
+   padding: 60px;
+}
 
-   p {
-      transition: all 1.5s;
-      color: black;
-   }
+.outcomeText {
+   height: 150px;
+   color: black;
+   transition: all 2s;
 }
 
 .outcomeTransition {
    color: white;
+}
+
+.resetButton {
+   background: black;
+   color: white;
+   border: white 1px solid;
+   padding: 10px 15px;
 }
