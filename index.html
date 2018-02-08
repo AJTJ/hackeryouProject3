@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+   <form action="">
+      <label for="choice1">
+         <img class="staplerImg" src="assets/stapler.JPG" alt="">
+      </label>
+      <input type="radio" name="radioButton" id="choice1" class="choice1 choice">
+      <input type="radio" name="radioButton" id="" class="choice2 choice">
+      <input type="radio" name="radioButton" id="" class="choice3 choice">
+      <input type="radio" name="radioButton" id="" class="choice4 choice">
+      <input type="radio" name="radioButton" id="" class="choice5 choice">
+      <input type="radio" name="radioButton" id="" class="choice6 choice">
+   </form>
+   
+   <div class="messageZoneDiv">
+      <div class="messageZone"></div>
+   </div>
+
+   <div class="choice1Overlay choiceOverlay">
+      <div>
+         <p>Choice number one.</p>
+         <a class="closeX close" href=""><i class="far fa-window-close"></i></a>
+         <button class="choiceButton1 choiceButton close">Yes</button>
+      </div>
+   </div>
+   <div class="choice2Overlay choiceOverlay">
+      <div>
+         <p>Choice number two.</p>
+         <a class="closeX close" href=""><i class="far fa-window-close"></i></a>
+         <button class="choiceButton2 choiceButton close">Yes</button>
+      </div>
+   </div>
+   <div class="choice3Overlay choiceOverlay"></div>
+   <div class="choice4Overlay choiceOverlay"></div>
+   <div class="choice5Overlay choiceOverlay"></div>
+   <div class="choice6Overlay choiceOverlay"></div>
+   <div class="outcomePage">
+      <div class="outcomeText outcomeText1"></div>
+      <div class="outcomeText outcomeText2"></div>
+      <div class="outcomeText outcomeText3"></div>
+      <div class="outcomeText outcomeText4"></div>
+      <div class="outcomeText outcomeText5"></div>
+      <button class="resetButton">Let me try again...</button>
+   </div>
+</body>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+<script defer src='https://use.fontawesome.com/releases/v5.0.4/js/all.js'></script>
+<script src="scripts.js"></script>
+<!-- <script src="typewriter.js"></script> -->
+</html>
