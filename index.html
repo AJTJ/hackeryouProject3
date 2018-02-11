@@ -5,45 +5,50 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Document</title>
+   <link href="https://fonts.googleapis.com/css?family=Megrim|Philosopher" rel="stylesheet">
    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-   <form action="">
-      <label for="choice1">
-         <img class="staplerImg" src="assets/stapler.JPG" alt="">
-      </label>
-      <input type="radio" name="radioButton" id="choice1" class="choice1 choice">
-      <input type="radio" name="radioButton" id="" class="choice2 choice">
-      <input type="radio" name="radioButton" id="" class="choice3 choice">
-      <input type="radio" name="radioButton" id="" class="choice4 choice">
-      <input type="radio" name="radioButton" id="" class="choice5 choice">
-      <input type="radio" name="radioButton" id="" class="choice6 choice">
-   </form>
-   
-   <div class="messageZoneDiv">
-      <div class="messageZone"></div>
+
+   <!-- THE OVERLAY FOR THE INTRODUCTION PAGE-->
+
+   <div class="introPage displayed wrapper">
+      <h1>Title of App</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab tenetur ut voluptatum repudiandae voluptas delectus qui vitae deleniti beatae, possimus laboriosam. Assumenda, odio consequatur? Molestiae saepe dicta fuga dolore dolor ex expedita fugit praesentium molestias voluptatem. Neque deserunt ratione quas ipsum exercitationem? Ut, dignissimos ipsa tempore expedita exercitationem doloribus ipsum.</p>
+      <button class="hideIntroPage">Ok, let's go!</button>
    </div>
 
-   <div class="choice1Overlay choiceOverlay">
-      <div>
-         <p>Choice number one.</p>
-         <a class="closeX close" href=""><i class="far fa-window-close"></i></a>
-         <button class="choiceButton1 choiceButton close">Yes</button>
-      </div>
-   </div>
-   <div class="choice2Overlay choiceOverlay">
-      <div>
-         <p>Choice number two.</p>
-         <a class="closeX close" href=""><i class="far fa-window-close"></i></a>
-         <button class="choiceButton2 choiceButton close">Yes</button>
-      </div>
-   </div>
-   
-   <div class="choice3Overlay choiceOverlay"></div>
-   <div class="choice4Overlay choiceOverlay"></div>
-   <div class="choice5Overlay choiceOverlay"></div>
-   <div class="choice6Overlay choiceOverlay"></div>
+   <!-- THE BEGINNING OF MY MAIN PAGE -->
+      
+   <header>
+      <h2>Hmm... let me see...</h2>
+   </header>
 
+   <!-- THE MAIN SECTION, POPULATED IN JS -->
+   
+   <main class="wrapper">
+      <form></form>
+      <div class="messageZoneDiv">
+         <div class="messageZone"></div>
+         <button class="evolutionButton">Time is up... your AI is becoming something more...</button>
+      </div>
+      
+   </main>
+   
+   <!-- THE OVERLAY FOR SPECIFIC CHOICE INFORMATION -->
+
+   <div class="choiceOverlay">
+      <div>
+         <img class="overlayImg" src="" />
+         <div class="overlayColor"></div>
+         <a class="closeX close" href=""><i class="far fa-window-close"></i></a>
+         <p class="overlayMessage"></p>
+         <button class="confirm">Confirm</button>
+      </div>
+   </div>
+
+   <!-- THE OVERLAY FOR THE OUTCOMES PAGE -->
+   
    <div class="outcomePage">
       <div class="outcomeText outcomeText1"></div>
       <div class="outcomeText outcomeText2"></div>

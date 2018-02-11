@@ -1,12 +1,26 @@
+
+.wrapper {
+   max-width: 1050px;
+   margin: 0 auto;
+}
+
 p {
    margin: 0;
 }
 
 body {
-   background: lightgray;
+   padding: 0 10px;
 }
 
 button {
-   border: none;
+   border: 1px $borderColor solid;
+   padding: 32px 65px;
+   border-radius: 3px;
+   background: none;
    line-height: 0;
+   transition: all 0.3s;
+
+   &:hover {
+      background: $color2;
+   }
 }

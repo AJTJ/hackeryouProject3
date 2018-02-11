@@ -1,3 +1,6 @@
+
+// LIGHTBOX FOR CHOICES
+
 .choiceOverlay {
    visibility: hidden;
    opacity: 0;
@@ -9,22 +12,65 @@
    bottom: 0;
    right: 0;
    left: 0;
-   background: rgba(0,0,0,0.3);
+   background: rgba(12, 24, 33, 0.8);
    transition: all 0.5s;
 
    div {
       display: flex;
       position: relative;
+      flex-direction: column;
       justify-content: space-around;
-      align-items: center;
-      background: white;
       min-width: 400px;
-      min-height: 300px;
+      min-height: 400px;
+      z-index: 10;
+      box-shadow: 0 0 100px 70px rgba(12, 24, 33, 1);
+
+      a,
+      p,
+      button {
+         z-index: 10;
+      }
+
+      .overlayImg {
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         right: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         z-index: 8;
+      }
+
+      .overlayColor {
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         right: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 9;
+         background: rgba(12, 24, 33, 0.8);
+      }
 
       .closeX {
          position: absolute;
+         color: $color1;
          top: 5px;
          right: 5px;
       }
+      .overlayMessage {
+         text-align: center;
+      }
+      .confirm {
+         padding: 10px 20px;
+      }
    }
+
 }
+
+
+
+

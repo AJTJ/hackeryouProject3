@@ -1,0 +1,148 @@
+
+// $color1: rgba(219, 194, 207, 1);
+// $color2: rgba(159, 162, 178, 1);
+// $color3: rgba(60, 122, 137, 1);
+// $color4: rgba(46, 71, 86, 1);
+// $color5: rgba(22, 38, 46, 1);
+
+// $color1: rgba(234, 237, 237, 1);
+// $color2: rgba(124, 142, 145, 1);
+// $color3: rgba(100, 115, 123, 1);
+// $color4: rgba(59, 69, 74, 1);
+// $color5: rgba(24, 32, 35, 1);
+
+// $color1: rgba(214, 220, 220, 1);
+// $color2: rgba(124, 142, 145, 1);
+// $color3: rgba(100, 115, 123, 1);
+// $color4: rgba(59, 69, 74, 1);
+// $color5: rgba(24, 32, 35, 1);
+
+// $color1: rgba(151, 239, 233, 1);
+// $color2: rgba(167, 196, 194, 1);
+// $color3: rgba(106, 15, 73, 1);
+// $color4: rgba(74, 0, 31, 1);
+// $color5: rgba(46, 2, 25, 1);
+
+$color1: rgba(236, 235, 242, 1);
+$color2: rgba(50, 74, 95, 1);
+$color3: rgba(27, 42, 65, 1);
+$color4: rgba(12, 24, 33, 1);
+$color5: rgba(0, 0, 0, 1);
+
+$borderColor: $color2;
+$buttonColor: $color3;
+
+body {
+   background-color: $color5;
+   color: $color1;
+}
+
+span, h1, button {
+   color: $color1;
+}
+
+
+
+
+//    animation-name: color;
+//    animation-duration: 6s;
+//    animation-iteration-count: infinite;
+//  }
+ 
+//  @keyframes color {
+//    0% {
+//      background-color: $color5;
+//    }
+//    33% {
+//       background-color: $color5;
+//    }
+//    35% {
+//      background-color: $color4;
+//    }
+//    58% {
+//       background-color: $color5;
+//     }
+//    60% {
+//       background-color: $color3;
+//     }
+//    80% {
+//       background-color: $color5;
+//     }
+//    100% {
+//      background-color: $color5;
+//    }
+//  }
+
+//  @-webkit-keyframes body /* Safari and Chrome */
+// {
+
+// 50% {background: #bdc3c7; }
+// }
+
+// body {
+//    -webkit-animation: body 2s infinite;
+//   background: #f1c40f;
+// }
+// @-webkit-keyframes one /* Safari and Chrome */
+// {
+
+// 50% {background: white; }
+// }
+
+// .circle {
+//   -webkit-animation: one 4s infinite;
+//   position:absolute;
+//   width:100px;
+//   height:100px;
+//   background:red;
+//   border-radius:50%;
+//   top:40%;
+//   left:50%;
+//   margin-left: -50px;
+//   }
+// @-webkit-keyframes two /* Safari and Chrome */
+// {
+
+// 100% {background: green; opacity: 0;height:800px;width:800px;
+//  top: -webkit-calc(40% - 350px);
+// left: -webkit-calc(50% - 400px); }
+// }
+
+// @-webkit-keyframes three /* Safari and Chrome */
+// {
+// 100% {background: orange; opacity: 0;height:500px;width:500px;
+//  top: -webkit-calc(40% - 225px);
+// left: -webkit-calc(50% - 250px); }
+// }
+
+// .circle-two {
+//   -webkit-animation: two 2s infinite;
+//   position:absolute;
+//   width:100px;
+//   height:100px;
+//   //background:red;
+//   border-radius:50%;
+//   top:40%;
+//   left:50%;
+//   //top: -webkit-calc(40% - 175px);
+//   left: -webkit-calc(50% - 50px);
+//   opacity:0.3;
+//   }
+// .circle-three {
+//   -webkit-animation: three 2s infinite;
+//   -webkit-animation-delay: 0.3s;
+//   position:absolute;
+//   width:100px;
+//   height:100px;
+//   //background:red;
+//   border-radius:50%;
+//   top:40%;
+//   left:50%;
+//   //top: -webkit-calc(40% - 175px);
+//   left: -webkit-calc(50% - 50px);
+//   opacity:0.8;
+//   }
+
+//   <div class="circle"></div>
+//   <div class="circle-two"></div>
+//   <div class="circle-three"></div>

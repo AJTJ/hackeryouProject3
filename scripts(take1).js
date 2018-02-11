@@ -135,3 +135,15 @@ $(function () {
 //       };
 //    // };
 // };
+
+
+const usersChoice =  $('input').data('option');
+const showText = data[usersChoice];
+
+const data = {
+   choice1: 'loremajhdkjahdskjhaksdj',
+   choice2: 'akjdhkajshdkjashdjk'
+}
+
+const choice = $('div').data('option');
+<div class="blah" data-option="choice1"></div>

@@ -1,8 +1,12 @@
+@import "partials/colors.scss";
 @import "partials/global";
+@import "partials/typography";
 
+@import "partials/introPage";
+@import "partials/header";
 @import "partials/typewriter";
 @import "partials/outcome";
-@import "partials/mainPage";
+@import "partials/choices";
 @import "partials/choiceOverlay";
 
 @import "partials/toggles";
