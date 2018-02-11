@@ -19,11 +19,22 @@ h1 {
 }
 
 h2 {
-   font-size: 40px;
+   font-size: 60px;
+   line-height: 15px;
+   min-width: 700px;
 }
 
 h3 {
-   font-size: 60px;
+   font-size: 40px;
+}
+
+h4 {
+   font-size: 30px;
+}
+
+h5 {
+   font-size: 20px;
+   padding: 20px;
 }
 
 p {

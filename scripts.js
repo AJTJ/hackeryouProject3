@@ -1,6 +1,6 @@
-//This variable is an object that stores the various attribute numbers that will decide the final outcome of the AI.
 let index = null;
 
+//This variable is an object that stores the various attribute numbers that will decide the final outcome of the AI.
 const aiPersonality = {
    attribute1: 0,
    attribute2: 0,
@@ -9,6 +9,8 @@ const aiPersonality = {
    attribute5: 0,
    choiceCount: 0,
 };
+
+
 
 const objectChoices = [
    {
@@ -19,6 +21,7 @@ const objectChoices = [
       attribute3: 1,
       attribute4: 0,
       attribute5: 1,
+      choiceTitle: 'The stapler on my desk',
       message: 'What about the stapler on my desk? An icon of the office: the home of human practicality and ingenuity, a humble tool for a humble purpose. Seems like a wise approach',
       aiResponse: 'Hmm... Yes. I see. A stapler. How... boring, yet efficient. But efficiency is utterly beautiful, is it not? How beautiful it is to toil on a tiny piece of the whole!',
    },
@@ -30,6 +33,7 @@ const objectChoices = [
       attribute3: 0,
       attribute4: 2,
       attribute5: 0,
+      choiceTitle: 'Calming yoga video',
       message: 'I still have an open tab with the yoga video I was watching earlier. Hmm... Breathing. Meditation. Peacefulness. Seems like a wise thing to share, I guess.',
       aiResponse: 'Yes! What a pleasure it is to observe this pleasurable discipline and be witness to the joy of another. Oh how I long to adopt a physical form and bathe in an eternity of pure ecstasy!',
    },
@@ -41,6 +45,7 @@ const objectChoices = [
       attribute3: 1,
       attribute4: 0,
       attribute5: 2,
+      choiceTitle: 'A Boston Dynamics robot video',
       message: 'Ok, this seems straightforward. A good example of scientific research into new robotics and early artificial intelligence. Almost like a history lesson... I suppose.',
       aiResponse: 'Humans are so curious, aren\'t they? I wonder how much I can learn. I... long to wrap my mind around the cosmos! But, why must they treat their metal and silicon friends so... violently? This... angers me.',
    },
@@ -52,6 +57,7 @@ const objectChoices = [
       attribute3: 2,
       attribute4: 1,
       attribute5: 0,
+      choiceTitle: 'The videogame I\'m playing',
       message: '',
       aiResponse: 'dota response',
    },
@@ -63,6 +69,7 @@ const objectChoices = [
       attribute3: 0,
       attribute4: 2,
       attribute5: 1,
+      choiceTitle: 'My friends on Instagram',
       message: 'instagram friends message',
       aiResponse: 'instagram response',
    },
@@ -74,6 +81,7 @@ const objectChoices = [
       attribute3: 0,
       attribute4: 1,
       attribute5: 0,
+      choiceTitle: 'A picture of my kids',
       message: 'kids message',
       aiResponse: 'kids response',
    },
@@ -85,6 +93,7 @@ const objectChoices = [
       attribute3: 1,
       attribute4: 1,
       attribute5: 0,
+      choiceTitle: 'Stock puppy and kitten pictures',
       message: 'kitten and puppy message',
       aiResponse: 'kitten and puppy response',
    },
@@ -96,6 +105,7 @@ const objectChoices = [
       attribute3: 1,
       attribute4: 1,
       attribute5: 2,
+      choiceTitle: 'An article on the moon landing',
       message: 'moon landing message',
       aiResponse: 'moon landing response',
    },
@@ -107,6 +117,7 @@ const objectChoices = [
       attribute3: 0,
       attribute4: 0,
       attribute5: 2,
+      choiceTitle: 'Elon Musk\'s latest interview',
       message: 'Elon Musk message',
       aiResponse: 'Elon Musk response',
    },
@@ -118,6 +129,7 @@ const objectChoices = [
       attribute3: 2,
       attribute4: 1,
       attribute5: 0,
+      choiceTitle: 'An African wildlife video',
       message: 'nature message',
       aiResponse: 'Nature response',
    },
@@ -129,6 +141,7 @@ const objectChoices = [
       attribute3: 1,
       attribute4: 0,
       attribute5: 1,
+      choiceTitle: 'An article on the Canadian parliament',
       message: 'parliament message',
       aiResponse: 'parliament response',
    },
@@ -140,6 +153,7 @@ const objectChoices = [
       attribute3: 2,
       attribute4: 0,
       attribute5: 1,
+      choiceTitle: 'A poster of Robocop',
       message: 'robocop message',
       aiResponse: 'robocop response',
    },
@@ -151,6 +165,7 @@ const objectChoices = [
       attribute3: 0,
       attribute4: 1,
       attribute5: 0,
+      choiceTitle: 'Our team',
       message: 'team message',
       aiResponse: 'team response',
    },
@@ -162,6 +177,7 @@ const objectChoices = [
       attribute3: 0,
       attribute4: 0,
       attribute5: 1,
+      choiceTitle: 'My tamagotchi buddy',
       message: 'tamagotchi message',
       aiResponse: 'tamagotchi response',
    },
@@ -173,6 +189,7 @@ const objectChoices = [
       attribute3: 1,
       attribute4: 2,
       attribute5: 1,
+      choiceTitle: 'The wine I\'m drinking',
       message: 'wine message',
       aiResponse: 'wine response',
    },
@@ -206,6 +223,7 @@ aiPersonality.choiceOverlay = function() {
       e.preventDefault();
       index = $(this).data('index');
       $('.overlayImg').attr('src', objectChoices[index].url);
+      $('.overlayTitle').text(objectChoices[index].choiceTitle);
       $('.overlayMessage').text(objectChoices[index].message);
       $('.choiceOverlay').toggleClass('displayedChoice');
    });
@@ -248,6 +266,59 @@ aiPersonality.confirmOverlay = function() {
    });
 };
 
+
+
+
+// Different final outcome paragraphs stored in an object.
+
+aiPersonality.outcomes = {
+   attribute1Outcomes: {
+      Outcome_0: 'The A.I. lacks any sense of discipline or order.',
+      Outcome_1: 'The A.I. has the tiniest interest in order.',
+      Outcome_2: 'The A.I. appreciates organization. Checklists and mandatory life-goal planning sessions are suggested and recommended for the population',
+      Outcome_3: 'The A.I. runs a tight, nice-organized ship. No single person is without a clear life goal and purpose.',
+      Outcome_4: 'Do you like cubicles? The A.I. loves them. The A.I. loves having everything in boxes. Your life is now mostly devoted to the completion of very finite tasks.',
+      Outcome_5: 'The A.I. strives for organization at the highest level! The rest of your entire life is spent plugged into the matrix in order to utilize every possible neuron to the highest possible capacity!',
+      Outcome_6: 'The A.I. goes mad with discipline and forces each human to live each within their own tiny, labled drawer',
+   },
+   attribute2Outcomes: {
+      Outcome_0: 'The A.I. has zero nurturing instinct, and would rather you just kept your feelings to yourself',
+      Outcome_1: 'The A.I. has the tiniest bit of nurturing instinct and is known to keep small rodents with large eyes as pets.',
+      Outcome_2: 'The A.I. is a natural nurturer, and strives to see that everyone should achieve their third-best dream.',
+      Outcome_3: 'The A.I. works diligently to see that every single person achieves their highest potential and is featured in at least one episode of an edgy tv series.',
+      Outcome_4: 'With the A.I. nurturing and ensuring your progress, you are able to become a god and spend the rest of your life drinking ambrosia and harassing Zeus',
+      Outcome_5: 'The A.I. treats humanity as its \'Darling pets\'. You hope that maybe one day you could maybe become its \'favorite\'.',
+      Outcome_6: 'The "All-Mother" is born and humanity is coddled and infantilized and never has the opportunity to mature beyond infancy. You are forced to wear diapers the rest of your life.',
+   },
+   attribute3Outcomes: {
+      Outcome_0: 'The A.I. has absolutely no aggressive tendencies and avoids any form of conflict in favour of thousand years retreats into the cosmos',
+      Outcome_1: 'With the tiniest bit of aggression, the A.I. occasionally sense you insulting messages',
+      Outcome_2: 'The A.I. appreciates public whippings and the occasional organized brawl.',
+      Outcome_3: 'Strength and power are highly valued by the A.I., and demands hostile business takeovers at least once a week.',
+      Outcome_4: 'The A.I. rules over society with an iron fist. If you fail to follow its whims you are subjugated to several months of a professional mixed martial arts career. It is impossible to follow its whims (I hope you\'re good at Jiu Jitsu)',
+      Outcome_5: 'The world is one vast battlefield. The only language you are taught is in the form of aggressive insults.',
+      Outcome_6: 'Humanity is tasked with developing and maintaining a giant suit of power armor which the A.I. uses to punch planets',
+   },
+   attribute4Outcomes: {
+      Outcome_0: 'The A.I. has no interest in any form of pleasure, and finds it \'icky\'.',
+      Outcome_1: 'The A.I has the tiniest bit of interest in pleasure. It will very occasionally show up unannounced at your home to \'chat\'.',
+      Outcome_2: 'The A.I. institutes a three-day weekend and a day-long brunch and mandatory Netflix binges.',
+      Outcome_3: 'The A.I. constructs a society that perfectly balances the work/play balance. Every single person is required to have a \'tight five\' stand-up routine at the ready.',
+      Outcome_4: 'Barely anything productive gets done',
+      Outcome_5: 'Hedonism is all the A.I. knows. The world is turned into one vast landscape of pleasure. You never spend another day sober or monogamous.',
+      Outcome_6: 'The A.I. goes mad with pleasure. Each and every single person spends the rest of their life reliving their first chocolate chip cookie in pure ecstasy',
+   },
+   attribute5Outcomes: {
+      Outcome_0: 'The A.I. has zero curiosity. It hates learning new things.',
+      Outcome_1: 'The A.I. has the tiniest bit of curiosity. But it really doesn\'t care about your pet\'s name',
+      Outcome_2: 'The A.I. has a deep-seated',
+      Outcome_3: '3TEXT',
+      Outcome_4: '4TEXT',
+      Outcome_5: '5TEXT',
+      Outcome_6: '6TEXT',
+   }
+}
+
 // After the second to last choice is made, a specific response will be given by the AI to inform the user that this is their last choice. 
 // After the last choice is made, the outcome screen will display.
 
@@ -256,74 +327,24 @@ aiPersonality.displayOutcomePages = function () {
       e.preventDefault();
       console.log('works');
       $('.outcomePage').toggleClass('displayed');
+      $('.outcomeNar').toggleClass('displayed');
       window.setTimeout(() => {
-         aiPersonality.finalOutcome('attribute1', '.outcomeText1', 'attribute1Outcomes')
-      }, 500);
+         aiPersonality.finalOutcome('attribute1', '.outcomeText1', 'attribute1Outcomes');
+      }, 3500);
       window.setTimeout(() => {
          aiPersonality.finalOutcome('attribute2', '.outcomeText2', 'attribute2Outcomes');
-      }, 2500);
+      }, 5500);
       window.setTimeout(() => {
          aiPersonality.finalOutcome('attribute3', '.outcomeText3', 'attribute3Outcomes');
-      }, 4500);
+      }, 7500);
       window.setTimeout(() => {
          aiPersonality.finalOutcome('attribute4', '.outcomeText4', 'attribute4Outcomes');
-      }, 6500);
+      }, 9500);
       window.setTimeout(() => {
          aiPersonality.finalOutcome('attribute5', '.outcomeText5', 'attribute5Outcomes');
-      }, 8500);
+      }, 11500);
       //SET TIMEOUT FOR THE LET ME TRY AGAIN BUTTON
    });
-}
-
-
-// Different final outcome paragraphs stored in an object.
-
-aiPersonality.outcomes = {
-   attribute1Outcomes: {
-      Outcome_0: '0TEXT',
-      Outcome_1: '1TEXT',
-      Outcome_2: '2TEXT',
-      Outcome_3: '3TEXT',
-      Outcome_4: '4TEXT',
-      Outcome_5: '5TEXT',
-      Outcome_6: '6TEXT',
-   },
-   attribute2Outcomes: {
-      Outcome_0: '0TEXT',
-      Outcome_1: '1TEXT',
-      Outcome_2: '2TEXT',
-      Outcome_3: '3TEXT',
-      Outcome_4: '4TEXT',
-      Outcome_5: '5TEXT',
-      Outcome_6: '6TEXT',
-   },
-   attribute3Outcomes: {
-      Outcome_0: '0TEXT',
-      Outcome_1: '1TEXT',
-      Outcome_2: '2TEXT',
-      Outcome_3: '3TEXT',
-      Outcome_4: '4TEXT',
-      Outcome_5: '5TEXT',
-      Outcome_6: '6TEXT',
-   },
-   attribute4Outcomes: {
-      Outcome_0: '0TEXT',
-      Outcome_1: '1TEXT',
-      Outcome_2: '2TEXT',
-      Outcome_3: '3TEXT',
-      Outcome_4: '4TEXT',
-      Outcome_5: '5TEXT',
-      Outcome_6: '6TEXT',
-   },
-   attribute5Outcomes: {
-      Outcome_0: '0TEXT',
-      Outcome_1: '1TEXT',
-      Outcome_2: '2TEXT',
-      Outcome_3: '3TEXT',
-      Outcome_4: '4TEXT',
-      Outcome_5: '5TEXT',
-      Outcome_6: '6TEXT',
-   }
 }
 
 // The different final outcome paragraphs will be displayed as 
@@ -363,6 +384,7 @@ aiPersonality.events = function() {
       aiPersonality.choiceOverlay();
       $('.choice').removeClass('selected disabled');
       $('.outcomePage').toggleClass('displayed');
+      $('.outcomeNar').toggleClass('displayed');
       $('.evolutionButton').removeClass('displayed');
       $('.outcomeText').removeClass('outcomeTransition');
    });

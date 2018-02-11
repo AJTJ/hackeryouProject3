@@ -8,9 +8,13 @@
    right: 0;
    z-index: 10;
    padding: 0 10px;
-}
 
-h1 {
+   p {
+      font-size: 18px;
+      line-height: 20px;
+      width: 700px;
+      padding: 10px 50px 0;
+   }
 }
 
 .introPageTextFlex {
@@ -33,16 +37,7 @@ h1 {
    align-items: flex-start;
 }
 
-h3 {
-   line-height: 15px;
-   min-width: 700px;
-}
-p {
-   font-size: 18px;
-   line-height: 20px;
-   width: 700px;
-   padding: 10px 50px 0;
-}
+
 
 .hideIntroPage {
    position: absolute;

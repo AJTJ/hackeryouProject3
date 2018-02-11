@@ -8,11 +8,39 @@
    opacity: 1;
 
    img {
-      animation: blurOut 2s 1s linear forwards;
+      animation: blurOut 1s 1s linear forwards;
    }
 
    .choiceOverlayText {
-      animation: fadeInSlowly 1s linear forwards;
+      // animation: fadeInSlowly 1s linear forwards;
       visibility: visible;
+      opacity: 1;
    }
+}
+
+.disabled {
+   span {
+      background: rgba(0, 0, 0, 0.800);
+      &:hover {
+         background: rgba(0, 0, 0, 0.800);
+      }
+   }
+
+}
+
+.selected {
+   span {
+      background: none;
+
+      &:hover {
+         background: none;
+      }
+   }
+}
+
+// The transition for the final personality attributes
+
+.outcomeTransition {
+   color: white;
+   opacity: 1;
 }
