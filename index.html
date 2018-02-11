@@ -5,35 +5,53 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Document</title>
+   <!-- <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"> -->
    <link href="https://fonts.googleapis.com/css?family=Megrim|Philosopher" rel="stylesheet">
    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-   <!-- THE OVERLAY FOR THE INTRODUCTION PAGE-->
-
-   <div class="introPage displayed wrapper">
-      <h1>Title of App</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab tenetur ut voluptatum repudiandae voluptas delectus qui vitae deleniti beatae, possimus laboriosam. Assumenda, odio consequatur? Molestiae saepe dicta fuga dolore dolor ex expedita fugit praesentium molestias voluptatem. Neque deserunt ratione quas ipsum exercitationem? Ut, dignissimos ipsa tempore expedita exercitationem doloribus ipsum.</p>
-      <button class="hideIntroPage">Ok, let's go!</button>
-   </div>
-
-   <!-- THE BEGINNING OF MY MAIN PAGE -->
-      
-   <header>
-      <h2>Hmm... let me see...</h2>
-   </header>
-
-   <!-- THE MAIN SECTION, POPULATED IN JS -->
-   
+   <!-- THE MAIN SECTION-->
    <main class="wrapper">
+      <h2 class="mainPageTitle">"This seems like a really important decision... damn."</h2>
       <form></form>
       <div class="messageZoneDiv">
          <div class="messageZone"></div>
-         <button class="evolutionButton">Time is up... your AI is becoming something more...</button>
+         <button class="evolutionButton">Let me see what I've created!</button>
       </div>
-      
    </main>
+
+   <!-- THE OVERLAY FOR THE INTRODUCTION PAGE-->
+
+   <div class="introPage displayed ">
+      <div class="wrapper">
+         <h1>Last Minute A.I.</h1>
+         <div class="introPageTextFlex">
+            <div class="introPageTextBlock">
+               <h3>The background:</h3>
+               <p>You're an intelligent and highly educated scientist part of a large team of scientists working on what will be the world's first super-intelligent Artificial Intelligence. You've been working for five years and the project is almost at a close.</p>
+            </div>
+            <div class="introPageTextBlock">
+               <h3>The scene:</h3>
+               <p>It's late at night, and everyone has gone home. You're sitting alone at your desk, drinking a glass of wine, playing some videogames and exploring the internet. You feel comfortable and happy, and why should you not: you're achieving your life dreams! You're building A.I.! </p>
+            </div>
+            <div class="introPageTextBlock">
+               <h3>The scenario:</h3>
+               <p> Suddenly, a warning light goes off on your computer... Your anxiety grows as you race through a quick series of system's checks... What?... No... This can't be happening... The A.I. is... growing!? Now? How?!?! It shouldn't be ready yet! It's too early! But your A.I. is racing exponentially towards <a href="">the singularity.</a></p>
+            </div>
+            <div class="introPageTextBlock">
+               <h3>The predicament:</h3>
+               <p> You can't allow your A.I. to begin its life on the internet! Numerous statistical models have shown that an A.I. thrown into the internet with no direction will become a cat-addicted, close-minded, bigoted, sociopath! You look around your office and your computer to see how you can mold this budding super-intelligence...</p>
+            </div>
+            <div class="introPageTextBlock">
+               <h3 class="warningText">Know This!</h3>
+               <p>You only have time for three choices!</p>
+            </div>
+         </div>
+         <button class="hideIntroPage animated fadeIn">Let's go... I guess...</button>
+      </div>
+   </div>
    
    <!-- THE OVERLAY FOR SPECIFIC CHOICE INFORMATION -->
 
@@ -42,8 +60,10 @@
          <img class="overlayImg" src="" />
          <div class="overlayColor"></div>
          <a class="closeX close" href=""><i class="far fa-window-close"></i></a>
-         <p class="overlayMessage"></p>
-         <button class="confirm">Confirm</button>
+         <div class="choiceOverlayText">
+            <p class="overlayMessage"></p>
+         </div>
+         <button class="confirm">Confirm choice</button>
       </div>
    </div>
 
@@ -57,6 +77,7 @@
       <div class="outcomeText outcomeText5"></div>
       <button class="resetButton">Let me try again...</button>
    </div>
+
 </body>
 <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 <script defer src='https://use.fontawesome.com/releases/v5.0.4/js/all.js'></script>

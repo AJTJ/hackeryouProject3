@@ -2,3 +2,17 @@
    visibility: visible;
    opacity: 1;
 }
+
+.displayedChoice {
+   visibility: visible;
+   opacity: 1;
+
+   img {
+      animation: blurOut 2s 1s linear forwards;
+   }
+
+   .choiceOverlayText {
+      animation: fadeInSlowly 1s linear forwards;
+      visibility: visible;
+   }
+}

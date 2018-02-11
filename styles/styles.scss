@@ -2,11 +2,13 @@
 @import "partials/global";
 @import "partials/typography";
 
+@import "partials/animations";
+
 @import "partials/introPage";
 @import "partials/header";
-@import "partials/typewriter";
 @import "partials/outcome";
-@import "partials/choices";
+@import "partials/mainPage";
 @import "partials/choiceOverlay";
 
+@import "partials/animate";
 @import "partials/toggles";

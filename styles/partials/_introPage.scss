@@ -9,3 +9,49 @@
    z-index: 10;
    padding: 0 10px;
 }
+
+h1 {
+}
+
+.introPageTextFlex {
+   display: flex;
+   flex-direction: column;
+}
+
+.introPageTextBlock {
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+
+}
+
+.introPageTextBlock:nth-child(even) {
+   align-items: flex-end;
+}
+
+.introPageTextBlock:nth-child(odd) {
+   align-items: flex-start;
+}
+
+h3 {
+   line-height: 15px;
+   min-width: 700px;
+}
+p {
+   font-size: 18px;
+   line-height: 20px;
+   width: 700px;
+   padding: 10px 50px 0;
+}
+
+.hideIntroPage {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   display: inline-block;
+   max-width: 300px;
+   padding: 20px 50px;
+   margin: 20px;
+   align-self: flex-end;
+
+}

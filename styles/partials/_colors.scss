@@ -37,8 +37,25 @@ body {
    color: $color1;
 }
 
+a {
+   color: wheat;
+   text-decoration: none;
+
+   &:hover, &:active {
+      color: $color2;
+   }
+}
+
 span, h1, button {
    color: $color1;
+}
+
+h2 {
+   color: $color2;
+}
+
+h3 {
+   color: $color2;
 }
 
 

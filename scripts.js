@@ -19,8 +19,8 @@ const objectChoices = [
       attribute3: 1,
       attribute4: 0,
       attribute5: 1,
-      message: 'Stapler message',
-      aiResponse: 'Stapler response',
+      message: 'What about the stapler on my desk? An icon of the office: the home of human practicality and ingenuity, a humble tool for a humble purpose. Seems like a wise approach',
+      aiResponse: 'Hmm... Yes. I see. A stapler. How... boring, yet efficient. But efficiency is utterly beautiful, is it not? How beautiful it is to toil on a tiny piece of the whole!',
    },
    {
       id: 'choice1',
@@ -30,8 +30,8 @@ const objectChoices = [
       attribute3: 0,
       attribute4: 2,
       attribute5: 0,
-      message: 'yoga message',
-      aiResponse: 'yoga response',
+      message: 'I still have an open tab with the yoga video I was watching earlier. Hmm... Breathing. Meditation. Peacefulness. Seems like a wise thing to share, I guess.',
+      aiResponse: 'Yes! What a pleasure it is to observe this pleasurable discipline and be witness to the joy of another. Oh how I long to adopt a physical form and bathe in an eternity of pure ecstasy!',
    },
    {
       id: 'choice2',
@@ -41,8 +41,8 @@ const objectChoices = [
       attribute3: 1,
       attribute4: 0,
       attribute5: 2,
-      message: 'boston shit',
-      aiResponse: 'boston response',
+      message: 'Ok, this seems straightforward. A good example of scientific research into new robotics and early artificial intelligence. Almost like a history lesson... I suppose.',
+      aiResponse: 'Humans are so curious, aren\'t they? I wonder how much I can learn. I... long to wrap my mind around the cosmos! But, why must they treat their metal and silicon friends so... violently? This... angers me.',
    },
    {
       id: 'choice3',
@@ -52,17 +52,17 @@ const objectChoices = [
       attribute3: 2,
       attribute4: 1,
       attribute5: 0,
-      message: 'dota message',
+      message: '',
       aiResponse: 'dota response',
    },
    {
       id: 'choice4',
       url: 'assets/instagram.jpg',
-      attribute1: 1,
-      attribute2: 0,
-      attribute3: 2,
-      attribute4: 1,
-      attribute5: 0,
+      attribute1: 0,
+      attribute2: 1,
+      attribute3: 0,
+      attribute4: 2,
+      attribute5: 1,
       message: 'instagram friends message',
       aiResponse: 'instagram response',
    },
@@ -70,8 +70,8 @@ const objectChoices = [
       id: 'choice5',
       url: 'assets/kids.jpg',
       attribute1: 1,
-      attribute2: 0,
-      attribute3: 2,
+      attribute2: 2,
+      attribute3: 0,
       attribute4: 1,
       attribute5: 0,
       message: 'kids message',
@@ -80,9 +80,9 @@ const objectChoices = [
    {
       id: 'choice6',
       url: 'assets/kittenPuppy.jpg',
-      attribute1: 1,
+      attribute1: 2,
       attribute2: 0,
-      attribute3: 2,
+      attribute3: 1,
       attribute4: 1,
       attribute5: 0,
       message: 'kitten and puppy message',
@@ -91,11 +91,11 @@ const objectChoices = [
    {
       id: 'choice7',
       url: 'assets/moon.jpg',
-      attribute1: 1,
+      attribute1: 0,
       attribute2: 0,
-      attribute3: 2,
+      attribute3: 1,
       attribute4: 1,
-      attribute5: 0,
+      attribute5: 2,
       message: 'moon landing message',
       aiResponse: 'moon landing response',
    },
@@ -103,18 +103,18 @@ const objectChoices = [
       id: 'choice8',
       url: 'assets/musk.jpg',
       attribute1: 1,
-      attribute2: 0,
-      attribute3: 2,
-      attribute4: 1,
-      attribute5: 0,
+      attribute2: 1,
+      attribute3: 0,
+      attribute4: 0,
+      attribute5: 2,
       message: 'Elon Musk message',
       aiResponse: 'Elon Musk response',
    },
    {
       id: 'choice9',
       url: 'assets/natureShow.jpg',
-      attribute1: 1,
-      attribute2: 0,
+      attribute1: 0,
+      attribute2: 1,
       attribute3: 2,
       attribute4: 1,
       attribute5: 0,
@@ -124,11 +124,11 @@ const objectChoices = [
    {
       id: 'choice10',
       url: 'assets/parliamentCanada.jpg',
-      attribute1: 1,
+      attribute1: 2,
       attribute2: 0,
-      attribute3: 2,
-      attribute4: 1,
-      attribute5: 0,
+      attribute3: 1,
+      attribute4: 0,
+      attribute5: 1,
       message: 'parliament message',
       aiResponse: 'parliament response',
    },
@@ -138,17 +138,17 @@ const objectChoices = [
       attribute1: 1,
       attribute2: 0,
       attribute3: 2,
-      attribute4: 1,
-      attribute5: 0,
+      attribute4: 0,
+      attribute5: 1,
       message: 'robocop message',
       aiResponse: 'robocop response',
    },
    {
       id: 'choice12',
       url: 'assets/scienceTeam.jpg',
-      attribute1: 1,
-      attribute2: 0,
-      attribute3: 2,
+      attribute1: 2,
+      attribute2: 1,
+      attribute3: 0,
       attribute4: 1,
       attribute5: 0,
       message: 'team message',
@@ -158,21 +158,21 @@ const objectChoices = [
       id: 'choice13',
       url: 'assets/tamagotchi.jpg',
       attribute1: 1,
-      attribute2: 0,
-      attribute3: 2,
-      attribute4: 1,
-      attribute5: 0,
+      attribute2: 2,
+      attribute3: 0,
+      attribute4: 0,
+      attribute5: 1,
       message: 'tamagotchi message',
       aiResponse: 'tamagotchi response',
    },
    {
       id: 'choice14',
       url: 'assets/wine.jpg',
-      attribute1: 1,
+      attribute1: 0,
       attribute2: 0,
-      attribute3: 2,
-      attribute4: 1,
-      attribute5: 0,
+      attribute3: 1,
+      attribute4: 2,
+      attribute5: 1,
       message: 'wine message',
       aiResponse: 'wine response',
    },
@@ -207,7 +207,7 @@ aiPersonality.choiceOverlay = function() {
       index = $(this).data('index');
       $('.overlayImg').attr('src', objectChoices[index].url);
       $('.overlayMessage').text(objectChoices[index].message);
-      $('.choiceOverlay').toggleClass('displayed');
+      $('.choiceOverlay').toggleClass('displayedChoice');
    });
 };
 
@@ -216,7 +216,7 @@ aiPersonality.closeOverlay = function() {
    $('.close').on('click', function(e) {
       e.preventDefault();
       index = null;
-      $('.choiceOverlay').removeClass('displayed');
+      $('.choiceOverlay').removeClass('displayedChoice');
    });
 }
 
@@ -236,7 +236,7 @@ aiPersonality.confirmOverlay = function() {
       aiPersonality.attribute5 += objectChoices[index].attribute5;
       $('.messageZone').text(objectChoices[index].aiResponse);
       $('#choice' + index).unbind('click').addClass('selected disabled');
-      $('.choiceOverlay').removeClass('displayed');
+      $('.choiceOverlay').removeClass('displayedChoice');
       //go to an overlay with hard-coded narrative
       //button on that page to 
       //go to the outcomes page
@@ -271,7 +271,7 @@ aiPersonality.displayOutcomePages = function () {
       window.setTimeout(() => {
          aiPersonality.finalOutcome('attribute5', '.outcomeText5', 'attribute5Outcomes');
       }, 8500);
-      //SET TIMEOUT BUTTON FOR THE LET ME TRY AGAIN SHIT
+      //SET TIMEOUT FOR THE LET ME TRY AGAIN BUTTON
    });
 }
 
@@ -285,6 +285,8 @@ aiPersonality.outcomes = {
       Outcome_2: '2TEXT',
       Outcome_3: '3TEXT',
       Outcome_4: '4TEXT',
+      Outcome_5: '5TEXT',
+      Outcome_6: '6TEXT',
    },
    attribute2Outcomes: {
       Outcome_0: '0TEXT',
@@ -292,6 +294,8 @@ aiPersonality.outcomes = {
       Outcome_2: '2TEXT',
       Outcome_3: '3TEXT',
       Outcome_4: '4TEXT',
+      Outcome_5: '5TEXT',
+      Outcome_6: '6TEXT',
    },
    attribute3Outcomes: {
       Outcome_0: '0TEXT',
@@ -299,6 +303,8 @@ aiPersonality.outcomes = {
       Outcome_2: '2TEXT',
       Outcome_3: '3TEXT',
       Outcome_4: '4TEXT',
+      Outcome_5: '5TEXT',
+      Outcome_6: '6TEXT',
    },
    attribute4Outcomes: {
       Outcome_0: '0TEXT',
@@ -306,6 +312,8 @@ aiPersonality.outcomes = {
       Outcome_2: '2TEXT',
       Outcome_3: '3TEXT',
       Outcome_4: '4TEXT',
+      Outcome_5: '5TEXT',
+      Outcome_6: '6TEXT',
    },
    attribute5Outcomes: {
       Outcome_0: '0TEXT',
@@ -313,11 +321,14 @@ aiPersonality.outcomes = {
       Outcome_2: '2TEXT',
       Outcome_3: '3TEXT',
       Outcome_4: '4TEXT',
+      Outcome_5: '5TEXT',
+      Outcome_6: '6TEXT',
    }
 }
 
 // The different final outcome paragraphs will be displayed as 
 // they are related directly with the final number of each attribute.
+// CONSIDER IMPLEMENTING A SWITCH HERE
 aiPersonality.finalOutcome = function (attNum, outcomeText, attributeOutcome) {
    if (aiPersonality[attNum] === 0) {
       $(outcomeText).text(aiPersonality.outcomes[attributeOutcome].Outcome_0).addClass('outcomeTransition');
@@ -329,8 +340,12 @@ aiPersonality.finalOutcome = function (attNum, outcomeText, attributeOutcome) {
       $(outcomeText).text(aiPersonality.outcomes[attributeOutcome].Outcome_3).addClass('outcomeTransition');
    } else if (aiPersonality[attNum] === 4) {
       $(outcomeText).text(aiPersonality.outcomes[attributeOutcome].Outcome_4).addClass('outcomeTransition');
+   } else if (aiPersonality[attNum] === 5) {
+      $(outcomeText).text(aiPersonality.outcomes[attributeOutcome].Outcome_5).addClass('outcomeTransition');
+   } else if (aiPersonality[attNum] === 6) {
+      $(outcomeText).text(aiPersonality.outcomes[attributeOutcome].Outcome_6).addClass('outcomeTransition');
    } else {
-      console.log('nothing happens');
+      console.log('nothing happens, somehow got another value');
    };
 }
 
