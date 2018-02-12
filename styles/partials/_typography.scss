@@ -1,5 +1,7 @@
 //  'Megrim', cursive;
- $fontHeader:'Philosopher', sans-serif;
+//  $fontHeader:'Philosopher', sans-serif;
+$fontHeader:'Orbitron', sans-serif;
+$mainFont:'Share Tech Mono', monospace;
 
 body {
    font-size: 18px;
@@ -9,19 +11,21 @@ button {
    font-size: 16px;
 }
 
+p, span, button, div {
+   font-family: $mainFont;
+}
+
 h1, h2, h3, h4, h5 {
    margin: 0;
    font-family: $fontHeader;
 }
 
 h1 {
-   font-size: 120px;
+   font-size: 110px;
 }
 
 h2 {
    font-size: 60px;
-   line-height: 15px;
-   min-width: 700px;
 }
 
 h3 {

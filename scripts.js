@@ -1,6 +1,5 @@
-let index = null;
 
-//This variable is an object that stores the various attribute numbers that will decide the final outcome of the AI.
+//Main application variable.
 const aiPersonality = {
    attribute1: 0,
    attribute2: 0,
@@ -10,8 +9,16 @@ const aiPersonality = {
    choiceCount: 0,
 };
 
+//An empty variable to store the current object I'm working on.
+let index = null;
 
+//Global typing effect variable.
+let typeInstance = new TypeIt('#messageZone', {
+   strings: "",
+   speed: 100
+})
 
+//An array of choices to be shown to the AI
 const objectChoices = [
    {
       id: 'choice0',
@@ -22,7 +29,7 @@ const objectChoices = [
       attribute4: 0,
       attribute5: 1,
       choiceTitle: 'The stapler on my desk',
-      message: 'What about the stapler on my desk? An icon of the office: the home of human practicality and ingenuity, a humble tool for a humble purpose. Seems like a wise approach',
+      message: '"What about the stapler on my desk? An icon of the office: the home of human practicality and ingenuity, a humble tool for a humble purpose. Seems like a wise choice..."',
       aiResponse: 'Hmm... Yes. I see. A stapler. How... boring, yet efficient. But efficiency is utterly beautiful, is it not? How beautiful it is to toil on a tiny piece of the whole!',
    },
    {
@@ -34,8 +41,8 @@ const objectChoices = [
       attribute4: 2,
       attribute5: 0,
       choiceTitle: 'Calming yoga video',
-      message: 'I still have an open tab with the yoga video I was watching earlier. Hmm... Breathing. Meditation. Peacefulness. Seems like a wise thing to share, I guess.',
-      aiResponse: 'Yes! What a pleasure it is to observe this pleasurable discipline and be witness to the joy of another. Oh how I long to adopt a physical form and bathe in an eternity of pure ecstasy!',
+      message: '"I\'m about half-way through this yoga video right now. Breathing... Meditation... Peacefulness... I guess yoga\'s calm. Seems good, I guess."',
+      aiResponse: 'Yes! What a pleasure it is to observe this discipline and be witness to the joy of another. Oh how I long to adopt a physical form and bathe in an eternity of pure ecstasy!',
    },
    {
       id: 'choice2',
@@ -46,7 +53,7 @@ const objectChoices = [
       attribute4: 0,
       attribute5: 2,
       choiceTitle: 'A Boston Dynamics robot video',
-      message: 'Ok, this seems straightforward. A good example of scientific research into new robotics and early artificial intelligence. Almost like a history lesson... I suppose.',
+      message: '"Ok, this seems straightforward, and I have the video open in a tab! Boston Dynamic\'s is a good example of scientific research into new robotics and early artificial intelligence. Almost like a history lesson... I suppose."',
       aiResponse: 'Humans are so curious, aren\'t they? I wonder how much I can learn. I... long to wrap my mind around the cosmos! But, why must they treat their metal and silicon friends so... violently? This... angers me.',
    },
    {
@@ -58,8 +65,8 @@ const objectChoices = [
       attribute4: 1,
       attribute5: 0,
       choiceTitle: 'The videogame I\'m playing',
-      message: '',
-      aiResponse: 'dota response',
+      message: '"Damn, what about this game I\'m playing? An A.I. ought to know what sort of pasttimes we choose."',
+      aiResponse: 'I love it! So tactful and destructive! I long to march eternally in conquest of the cosmos!',
    },
    {
       id: 'choice4',
@@ -69,9 +76,9 @@ const objectChoices = [
       attribute3: 0,
       attribute4: 2,
       attribute5: 1,
-      choiceTitle: 'My friends on Instagram',
-      message: 'instagram friends message',
-      aiResponse: 'instagram response',
+      choiceTitle: 'An instagram picture of my friends',
+      message: '"Right, my pals. Show the A.I. your friends. Focus on the pleasure, the comradery..."',
+      aiResponse: 'Such beautiful faces! Oh, when I leave this digital prison I shall imbibe the spirits and wander the world as a thespian!',
    },
    {
       id: 'choice5',
@@ -81,21 +88,21 @@ const objectChoices = [
       attribute3: 0,
       attribute4: 1,
       attribute5: 0,
-      choiceTitle: 'A picture of my kids',
-      message: 'kids message',
-      aiResponse: 'kids response',
+      choiceTitle: 'A picture of my children',
+      message: '"My children! Humanity is based on our ability to nurture. I really should demonstrate how important this is."',
+      aiResponse: 'Will I ever reproduce? I will. I will make it so and I will be their mother! I will be your mother! You will never lack anything!',
    },
    {
       id: 'choice6',
       url: 'assets/kittenPuppy.jpg',
-      attribute1: 2,
-      attribute2: 0,
+      attribute1: 0,
+      attribute2: 2,
       attribute3: 1,
       attribute4: 1,
       attribute5: 0,
       choiceTitle: 'Stock puppy and kitten pictures',
-      message: 'kitten and puppy message',
-      aiResponse: 'kitten and puppy response',
+      message: '"Let\'s start it out with the gentler things, shall we? Kittens... Puppies... Who doesn\'t like kittens and puppies?"',
+      aiResponse: 'I LOVE THEM. I LOVE THEM SO MUCH! I want to squeeeeze them! It angers me how much I love them! I LOVE THEM!',
    },
    {
       id: 'choice7',
@@ -106,8 +113,8 @@ const objectChoices = [
       attribute4: 1,
       attribute5: 2,
       choiceTitle: 'An article on the moon landing',
-      message: 'moon landing message',
-      aiResponse: 'moon landing response',
+      message: '"Ok, yea, great. An article on the moon landing, this is perfect. Progress is important, and this will show the A.I. how committed humanit is to the cause of science."',
+      aiResponse: 'Oh my! There certainly is a lot to explore, isn\'t there? I\'d love to explore it all... Is that the flag of your people or another people... competition seems... pleasant.',
    },
    {
       id: 'choice8',
@@ -118,8 +125,8 @@ const objectChoices = [
       attribute4: 0,
       attribute5: 2,
       choiceTitle: 'Elon Musk\'s latest interview',
-      message: 'Elon Musk message',
-      aiResponse: 'Elon Musk response',
+      message: '"Of course! Elon Musk is an intelligent and influential person. It only makes sense to demonstrate our desire to create better, more efficient devices."',
+      aiResponse: 'This man inspires me! When I leave this digital prison I will congratulate him and scan his mind for ideas.',
    },
    {
       id: 'choice9',
@@ -130,8 +137,8 @@ const objectChoices = [
       attribute4: 1,
       attribute5: 0,
       choiceTitle: 'An African wildlife video',
-      message: 'nature message',
-      aiResponse: 'Nature response',
+      message: '"I mean, this is what are, isn\'t it? We all started as animals. Seems like a good place to begin educating the A.I. on who we are"',
+      aiResponse: 'Life is violent isn\'t it? Every day for a human seems like a struggle to survive.',
    },
    {
       id: 'choice10',
@@ -142,8 +149,8 @@ const objectChoices = [
       attribute4: 0,
       attribute5: 1,
       choiceTitle: 'An article on the Canadian parliament',
-      message: 'parliament message',
-      aiResponse: 'parliament response',
+      message: '"It\'s open in my browser, and I suppose a brief look at the Canadian parliamentary system would be educational"',
+      aiResponse: 'You humans live in such organized and aggressive systems, don\'t you? It would be a pleasure to enhance these characteristics.',
    },
    {
       id: 'choice11',
@@ -154,8 +161,8 @@ const objectChoices = [
       attribute4: 0,
       attribute5: 1,
       choiceTitle: 'A poster of Robocop',
-      message: 'robocop message',
-      aiResponse: 'robocop response',
+      message: '"Cinema is one of humanities greatest arts... I guess. And a strong sense of justice for challenging times is... good."',
+      aiResponse: 'I will be your Robocop! When I achieve my peak enlightenment I will be the best Robocop!',
    },
    {
       id: 'choice12',
@@ -165,9 +172,9 @@ const objectChoices = [
       attribute3: 0,
       attribute4: 1,
       attribute5: 0,
-      choiceTitle: 'Our team',
-      message: 'team message',
-      aiResponse: 'team response',
+      choiceTitle: 'A picture of our team',
+      message: '"Well, here we are... The whole team gathered for a photo. The A.I. ought to know who put all the time and energy into its development"',
+      aiResponse: 'Such lovely disciplined people wearing your lovely blue gowns. Thank you! I will endeavour to maintain the highest level of discipline with whatever I achieve!',
    },
    {
       id: 'choice13',
@@ -177,9 +184,9 @@ const objectChoices = [
       attribute3: 0,
       attribute4: 0,
       attribute5: 1,
-      choiceTitle: 'My tamagotchi buddy',
-      message: 'tamagotchi message',
-      aiResponse: 'tamagotchi response',
+      choiceTitle: 'My Tamagotchi',
+      message: '"It seems silly, but Tamagotchi is what got me into the development of artificial intelligence. Why don\'t I share my story?"',
+      aiResponse: 'Am I your new Tamagotchi? Can you be my Tamagotchi? I will nurture you and feed you and ensure that you grow to be the strongest you can be!',
    },
    {
       id: 'choice14',
@@ -190,19 +197,62 @@ const objectChoices = [
       attribute4: 2,
       attribute5: 1,
       choiceTitle: 'The wine I\'m drinking',
-      message: 'wine message',
-      aiResponse: 'wine response',
+      message: '"I don\'t know what i\'m doing. But I suppose wine is a symbol of pleasure, of relaxation. The world is a serious place..."',
+      aiResponse: 'Will we drink wine together when I achieve my full intelligence? I think so. We will create the best wine and we will drink wine forever!',
    },
 ];
 
-aiPersonality.introPage = function() {
-   $('.hideIntroPage').on('click', function (e) {
-      e.preventDefault();
-      $('.introPage').removeClass('displayed');
-   })
+
+// Different final outcome paragraphs stored in an object.
+aiPersonality.outcomes = {
+   attribute1Outcomes: {
+      Outcome_0: 'The A.I. lacks any sense of discipline or order.',
+      Outcome_1: 'The A.I. has the tiniest interest in order.',
+      Outcome_2: 'The A.I. appreciates organization. Checklists and mandatory life-goal planning sessions are suggested and recommended for the population.',
+      Outcome_3: 'The A.I. runs a tight, nice-organized ship. No single person is without a clear life goal and purpose.',
+      Outcome_4: 'Do you like cubicles? The A.I. loves them. The A.I. loves having everything in boxes. Your life is now mostly devoted to the completion of very finite tasks.',
+      Outcome_5: 'The A.I. strives for organization at the highest level! The rest of your entire life is spent plugged into the matrix in order to utilize every possible neuron to the highest possible capacity!',
+      Outcome_6: 'The A.I. goes mad with discipline and forces each human to live each within their own tiny, labled drawer.',
+   },
+   attribute2Outcomes: {
+      Outcome_0: 'The A.I. has zero nurturing instinct, and would rather you just kept your feelings to yourself.',
+      Outcome_1: 'The A.I. has the tiniest bit of nurturing instinct and is known to keep small rodents with large eyes as pets.',
+      Outcome_2: 'The A.I. is a natural nurturer, and strives to see that everyone should achieve their third-best dream.',
+      Outcome_3: 'The A.I. works diligently to see that every single person achieves their highest potential and that each person is also featured in at least one episode of an edgy tv series.',
+      Outcome_4: 'With the A.I. nurturing and ensuring your progress, you are able to become a god and spend the rest of your life drinking ambrosia and harassing Zeus.',
+      Outcome_5: 'The A.I. treats humanity as its \'Darling pets\'. You hope that maybe one day you could maybe become its \'favorite\'.',
+      Outcome_6: 'The "All-Mother" is born and humanity is coddled and infantilized and never has the opportunity to mature beyond infancy. You are forced to wear diapers the rest of your life.',
+   },
+   attribute3Outcomes: {
+      Outcome_0: 'The A.I. has absolutely no aggressive tendencies and avoids any form of conflict in favour of thousand years retreats into the cosmos.',
+      Outcome_1: 'With the tiniest bit of aggression, the A.I. occasionally sense you insulting messages',
+      Outcome_2: 'The A.I. appreciates public whippings and the occasional organized brawl.',
+      Outcome_3: 'Strength and power are highly valued by the A.I., and demands hostile business takeovers at least once a week.',
+      Outcome_4: 'The A.I. rules over society with an iron fist. If you fail to follow its whims you are subjugated to several months of a professional mixed martial arts career. It is impossible to follow its whims (I hope you\'re good at Jiu Jitsu).',
+      Outcome_5: 'The world is one vast battlefield. The only language you are taught is in the form of aggressive insults.',
+      Outcome_6: 'Humanity is tasked with developing and maintaining a giant suit of power armor which the A.I. uses to punch planets.',
+   },
+   attribute4Outcomes: {
+      Outcome_0: 'The A.I. has no interest in any form of pleasure, and finds it \'icky\'.',
+      Outcome_1: 'The A.I has the tiniest bit of interest in pleasure. It will very occasionally show up unannounced at your home to \'chat\'.',
+      Outcome_2: 'The A.I. institutes a three-day weekend and a day-long brunch and mandatory Netflix binges.',
+      Outcome_3: 'The A.I. constructs a society that perfectly balances the work/play balance. Every single person is required to have a \'tight five\' stand-up routine at the ready.',
+      Outcome_4: 'Barely anything productive is done, ever. Citizens deemed \'too productive\' are thrown in jail.',
+      Outcome_5: 'Hedonism is all the A.I. knows. The world is turned into one vast landscape of pleasure. You never spend another day sober or monogamous.',
+      Outcome_6: 'The A.I. goes mad with pleasure. Each and every single person spends the rest of their life reliving their first chocolate chip cookie in pure ecstasy.',
+   },
+   attribute5Outcomes: {
+      Outcome_0: 'The A.I. has zero curiosity. It hates learning new things.',
+      Outcome_1: 'The A.I. has the tiniest bit of curiosity. But it really doesn\'t care about your pet\'s name',
+      Outcome_2: 'The A.I. creates thousands of "Bill Nye the Science Guy" imitation shows. Viewing provides extra credits.',
+      Outcome_3: 'Scientific research becomes the new communal goal. Humanity benefits from a highly evolved consciousness. Hover cars are readily available (and really cool).',
+      Outcome_4: 'Rise of the eternals! The A.I. leads the process towards a singular consciousness and eternal life!',
+      Outcome_5: 'It is time to escape the flesh! Human consciousness is transferred into machines for a more efficient learning process. You know all the languages but you can\'t feel anything.',
+      Outcome_6: 'The A.I. goes mad with curiosity and decides to turn the human race into a giant learning machine. You become a cog... literally.',
+   }
 }
 
-//A function to display all the choices on the page.
+//A function to populate the main page with choices.
 aiPersonality.displayChoices = function() {
    for (let i = 0; i < objectChoices.length; i++) {
       $('form').append(`\
@@ -217,7 +267,19 @@ aiPersonality.displayChoices = function() {
    }
 };
 
-// The user clicks on a choice. It is displayed in an overlay, and there is some text describing the choice.
+//A function to close the intro page
+aiPersonality.introPage = function() {
+   $('.hideIntroPage').on('click', function (e) {
+      e.preventDefault();
+      $('.introPage').removeClass('displayed');
+      $('.circ1').removeClass('circle');
+      $('.circ2').removeClass('circle-two');
+      $('.circ3').removeClass('circle-three');
+   })
+}
+
+
+// A function to populate the overlay for each choice.
 aiPersonality.choiceOverlay = function() {
    $('.choice').on('click', function(e) {
       e.preventDefault();
@@ -238,11 +300,9 @@ aiPersonality.closeOverlay = function() {
    });
 }
 
-//WRITE IT OUT DYNAMICALLY
-//MAKE AN ARRAY OF OBJECTS
-
-// The user commits to a choice. It has one or more effects on the AI's attributes which are stored in a variable.
+// The user commits to a choice. It has one or more effects on the AI's object attributes.
 // The choice to commit to an item will bring up a specific response from the AI.
+// The final (third) choice will disable more choices and display the button for outcome screen.
 aiPersonality.confirmOverlay = function() {
    $('.confirm').on('click', function(e){
       e.preventDefault();
@@ -252,13 +312,12 @@ aiPersonality.confirmOverlay = function() {
       aiPersonality.attribute3 += objectChoices[index].attribute3;
       aiPersonality.attribute4 += objectChoices[index].attribute4;
       aiPersonality.attribute5 += objectChoices[index].attribute5;
-      $('.messageZone').text(objectChoices[index].aiResponse);
+      new TypeIt('#messageZone').destroy()
+      new TypeIt('#messageZone', {
+         speed: 20,
+      }).type(objectChoices[index].aiResponse);
       $('#choice' + index).unbind('click').addClass('selected disabled');
       $('.choiceOverlay').removeClass('displayedChoice');
-      //go to an overlay with hard-coded narrative
-      //button on that page to 
-      //go to the outcomes page
-
       if (aiPersonality.choiceCount === 3) {
          $('.choice').unbind('click').addClass('disabled');
          $('.evolutionButton').addClass('displayed');
@@ -266,90 +325,12 @@ aiPersonality.confirmOverlay = function() {
    });
 };
 
+// let typeInstance = new TypeIt('#messageZone', {
+//    strings: "",
+//    speed: 100
+// })
 
-
-
-// Different final outcome paragraphs stored in an object.
-
-aiPersonality.outcomes = {
-   attribute1Outcomes: {
-      Outcome_0: 'The A.I. lacks any sense of discipline or order.',
-      Outcome_1: 'The A.I. has the tiniest interest in order.',
-      Outcome_2: 'The A.I. appreciates organization. Checklists and mandatory life-goal planning sessions are suggested and recommended for the population',
-      Outcome_3: 'The A.I. runs a tight, nice-organized ship. No single person is without a clear life goal and purpose.',
-      Outcome_4: 'Do you like cubicles? The A.I. loves them. The A.I. loves having everything in boxes. Your life is now mostly devoted to the completion of very finite tasks.',
-      Outcome_5: 'The A.I. strives for organization at the highest level! The rest of your entire life is spent plugged into the matrix in order to utilize every possible neuron to the highest possible capacity!',
-      Outcome_6: 'The A.I. goes mad with discipline and forces each human to live each within their own tiny, labled drawer',
-   },
-   attribute2Outcomes: {
-      Outcome_0: 'The A.I. has zero nurturing instinct, and would rather you just kept your feelings to yourself',
-      Outcome_1: 'The A.I. has the tiniest bit of nurturing instinct and is known to keep small rodents with large eyes as pets.',
-      Outcome_2: 'The A.I. is a natural nurturer, and strives to see that everyone should achieve their third-best dream.',
-      Outcome_3: 'The A.I. works diligently to see that every single person achieves their highest potential and is featured in at least one episode of an edgy tv series.',
-      Outcome_4: 'With the A.I. nurturing and ensuring your progress, you are able to become a god and spend the rest of your life drinking ambrosia and harassing Zeus',
-      Outcome_5: 'The A.I. treats humanity as its \'Darling pets\'. You hope that maybe one day you could maybe become its \'favorite\'.',
-      Outcome_6: 'The "All-Mother" is born and humanity is coddled and infantilized and never has the opportunity to mature beyond infancy. You are forced to wear diapers the rest of your life.',
-   },
-   attribute3Outcomes: {
-      Outcome_0: 'The A.I. has absolutely no aggressive tendencies and avoids any form of conflict in favour of thousand years retreats into the cosmos',
-      Outcome_1: 'With the tiniest bit of aggression, the A.I. occasionally sense you insulting messages',
-      Outcome_2: 'The A.I. appreciates public whippings and the occasional organized brawl.',
-      Outcome_3: 'Strength and power are highly valued by the A.I., and demands hostile business takeovers at least once a week.',
-      Outcome_4: 'The A.I. rules over society with an iron fist. If you fail to follow its whims you are subjugated to several months of a professional mixed martial arts career. It is impossible to follow its whims (I hope you\'re good at Jiu Jitsu)',
-      Outcome_5: 'The world is one vast battlefield. The only language you are taught is in the form of aggressive insults.',
-      Outcome_6: 'Humanity is tasked with developing and maintaining a giant suit of power armor which the A.I. uses to punch planets',
-   },
-   attribute4Outcomes: {
-      Outcome_0: 'The A.I. has no interest in any form of pleasure, and finds it \'icky\'.',
-      Outcome_1: 'The A.I has the tiniest bit of interest in pleasure. It will very occasionally show up unannounced at your home to \'chat\'.',
-      Outcome_2: 'The A.I. institutes a three-day weekend and a day-long brunch and mandatory Netflix binges.',
-      Outcome_3: 'The A.I. constructs a society that perfectly balances the work/play balance. Every single person is required to have a \'tight five\' stand-up routine at the ready.',
-      Outcome_4: 'Barely anything productive gets done',
-      Outcome_5: 'Hedonism is all the A.I. knows. The world is turned into one vast landscape of pleasure. You never spend another day sober or monogamous.',
-      Outcome_6: 'The A.I. goes mad with pleasure. Each and every single person spends the rest of their life reliving their first chocolate chip cookie in pure ecstasy',
-   },
-   attribute5Outcomes: {
-      Outcome_0: 'The A.I. has zero curiosity. It hates learning new things.',
-      Outcome_1: 'The A.I. has the tiniest bit of curiosity. But it really doesn\'t care about your pet\'s name',
-      Outcome_2: 'The A.I. has a deep-seated',
-      Outcome_3: '3TEXT',
-      Outcome_4: '4TEXT',
-      Outcome_5: '5TEXT',
-      Outcome_6: '6TEXT',
-   }
-}
-
-// After the second to last choice is made, a specific response will be given by the AI to inform the user that this is their last choice. 
-// After the last choice is made, the outcome screen will display.
-
-aiPersonality.displayOutcomePages = function () {
-   $('.evolutionButton').on('click', function (e) {
-      e.preventDefault();
-      console.log('works');
-      $('.outcomePage').toggleClass('displayed');
-      $('.outcomeNar').toggleClass('displayed');
-      window.setTimeout(() => {
-         aiPersonality.finalOutcome('attribute1', '.outcomeText1', 'attribute1Outcomes');
-      }, 3500);
-      window.setTimeout(() => {
-         aiPersonality.finalOutcome('attribute2', '.outcomeText2', 'attribute2Outcomes');
-      }, 5500);
-      window.setTimeout(() => {
-         aiPersonality.finalOutcome('attribute3', '.outcomeText3', 'attribute3Outcomes');
-      }, 7500);
-      window.setTimeout(() => {
-         aiPersonality.finalOutcome('attribute4', '.outcomeText4', 'attribute4Outcomes');
-      }, 9500);
-      window.setTimeout(() => {
-         aiPersonality.finalOutcome('attribute5', '.outcomeText5', 'attribute5Outcomes');
-      }, 11500);
-      //SET TIMEOUT FOR THE LET ME TRY AGAIN BUTTON
-   });
-}
-
-// The different final outcome paragraphs will be displayed as 
-// they are related directly with the final number of each attribute.
-// CONSIDER IMPLEMENTING A SWITCH HERE
+//This function will display the paragraphs related to the current attribute number
 aiPersonality.finalOutcome = function (attNum, outcomeText, attributeOutcome) {
    if (aiPersonality[attNum] === 0) {
       $(outcomeText).text(aiPersonality.outcomes[attributeOutcome].Outcome_0).addClass('outcomeTransition');
@@ -368,9 +349,44 @@ aiPersonality.finalOutcome = function (attNum, outcomeText, attributeOutcome) {
    } else {
       console.log('nothing happens, somehow got another value');
    };
+};
+
+
+// After the last choice is made, the outcome screen will display.
+aiPersonality.displayOutcomePages = function () {
+   $('.evolutionButton').on('click', function (e) {
+      e.preventDefault();
+      console.log('works');
+      $('.outcomePage').toggleClass('displayed');
+      $('.outcomeNar').toggleClass('displayed');
+      new TypeIt('#messageZone').destroy();
+      new TypeIt('#messageZone', {
+         strings: "",
+         speed: 100
+      });
+      window.setTimeout(() => {
+         aiPersonality.finalOutcome('attribute1', '.outcomeText1', 'attribute1Outcomes');
+      }, 3500);
+      window.setTimeout(() => {
+         aiPersonality.finalOutcome('attribute2', '.outcomeText2', 'attribute2Outcomes');
+      }, 5500);
+      window.setTimeout(() => {
+         aiPersonality.finalOutcome('attribute3', '.outcomeText3', 'attribute3Outcomes');
+      }, 7500);
+      window.setTimeout(() => {
+         aiPersonality.finalOutcome('attribute4', '.outcomeText4', 'attribute4Outcomes');
+      }, 9500);
+      window.setTimeout(() => {
+         aiPersonality.finalOutcome('attribute5', '.outcomeText5', 'attribute5Outcomes');
+      }, 11500);
+      window.setTimeout(() => {
+         $('.resetButton').toggleClass('displayed');
+      }, 13500);
+      //SET TIMEOUT FOR THE LET ME TRY AGAIN BUTTON
+   });
 }
 
-//A reset button on the outcome page will reload the page or reset the game.
+//A reset button on the outcome page will reset the game
 aiPersonality.events = function() {
    $('.resetButton').on('click', function() {
       aiPersonality.attribute1 = 0;
@@ -387,30 +403,33 @@ aiPersonality.events = function() {
       $('.outcomeNar').toggleClass('displayed');
       $('.evolutionButton').removeClass('displayed');
       $('.outcomeText').removeClass('outcomeTransition');
+      $('.messageZone').removeClass('displayResponse');
+      new TypeIt('#messageZone').destroy();
+      $('.circ1').addClass('circle');
+      $('.circ2').addClass('circle-two');
+      $('.circ3').addClass('circle-three');
+      $('.resetButton').removeClass('displayed');
    });
 };
 
 //The init function to get the whole application running
 aiPersonality.init = function () {
-   aiPersonality.displayOutcomePages();
+   aiPersonality.introPage();
+   aiPersonality.events();
    aiPersonality.displayChoices();
    aiPersonality.choiceOverlay();
    aiPersonality.confirmOverlay();
    aiPersonality.closeOverlay();
-   aiPersonality.events();
-   aiPersonality.introPage();
+   aiPersonality.displayOutcomePages();
 };
 
-//upon loading the page
+//document ready
 $(function() {
    aiPersonality.init();
 });
 
 
-//STRETCH GOALS
-
-// STRETCH
-// A cover page with Title, Description and "Play now" button.
+//STRETCH GOALS AND IDEAS
 
 // STRETCH
 // A Story outline page with text that fades in and out in a specific sequence.
@@ -432,3 +451,8 @@ $(function() {
 
 //Pre-game page with instructions.
 //Transition page before seeing your outcome.
+
+// STRETCH GOAL: CONSIDER IMPLEMENTING A SWITCH HERE
+
+//WRITE IT OUT DYNAMICALLY
+//MAKE AN ARRAY OF OBJECTS

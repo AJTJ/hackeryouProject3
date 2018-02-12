@@ -43,4 +43,11 @@
 .outcomeTransition {
    color: white;
    opacity: 1;
+   min-width: 100%;
+}
+
+.displayResponse {
+   visibility: visible;
+   opacity: 1;
+   transition: all 3s;
 }
