@@ -12,11 +12,12 @@
    
    h1 {
       padding-top: 20px;
+      text-align: center;
    }
 
    p {
       font-size: 20px;
-      line-height: 20px;
+      line-height: 30px;
    }
    .wakeUp {
       z-index: 25;
@@ -24,10 +25,6 @@
    .warning {
       z-index: 25;
       align-self: flex-start;
-      // position: absolute;
-      // bottom: 0;
-      // right: 0;
-      // left: 30%;
    }
 }
 
@@ -43,7 +40,7 @@
    font-size: 20px;
    line-height: 30px;
    text-align: center;
-   padding: 30px;
+   padding: 20px;
 }
 
 .introPageTextFlex {
@@ -54,14 +51,19 @@
    margin-top: 20px;
 }
 
+.singu {
+   text-decoration: underline;
+}
+
+.drastic {
+   color: yellow;
+}
+
 .three {
    font-size: 50px;
 }
 
 .hideIntroPage {
-   // position: absolute;
-   // right: 0;
-   // bottom: 0;
    display: inline-block;
    max-width: 300px;
    padding: 20px 50px;

@@ -65,8 +65,8 @@ const objectChoices = [
       attribute4: 1,
       attribute5: 0,
       choiceTitle: 'The videogame I\'m playing',
-      message: '"Damn, what about this game I\'m playing? An A.I. ought to know what sort of pasttimes we choose."',
-      aiResponse: 'I love it! So tactful and destructive! I long to march eternally in conquest of the cosmos!',
+      message: '"Well, what about this game I\'m playing? An A.I. ought to know what sort of pasttimes we choose, right?"',
+      aiResponse: 'So tactful and destructive! You pummel each other so... delightfully! When I achieve peak capacity I will march eternally in conquest of the cosmos!',
    },
    {
       id: 'choice4',
@@ -77,7 +77,7 @@ const objectChoices = [
       attribute4: 2,
       attribute5: 1,
       choiceTitle: 'An instagram picture of my friends',
-      message: '"Right, my pals. Show the A.I. your friends. Focus on the pleasure, the comradery..."',
+      message: '"Ok, a picture of my pals. Just show the A.I. your friends. Focus on comradery, good times, etc..."',
       aiResponse: 'Such beautiful faces! Oh, when I leave this digital prison I shall imbibe the spirits and wander the world as a thespian!',
    },
    {
@@ -185,8 +185,8 @@ const objectChoices = [
       attribute4: 0,
       attribute5: 1,
       choiceTitle: 'My Tamagotchi',
-      message: '"It seems silly, but Tamagotchi is what got me into the development of artificial intelligence. Why don\'t I share my story?"',
-      aiResponse: 'Am I your new Tamagotchi? Can you be my Tamagotchi? I will nurture you and feed you and ensure that you grow to be the strongest you can be!',
+      message: '"It seems silly, but Tamagotchi is what got me into the development of artificial intelligence. Why don\'t I start with that?"',
+      aiResponse: 'Am I your new Tamagotchi? Can you be my Tamagotchi? I will nurture you and feed you and ensure that you grow to be the strongest you can be! Yes you will!',
    },
    {
       id: 'choice14',
@@ -208,7 +208,7 @@ aiPersonality.outcomes = {
    attribute1Outcomes: {
       Outcome_0: 'The A.I. lacks any sense of discipline or order.',
       Outcome_1: 'The A.I. has the tiniest interest in order.',
-      Outcome_2: 'The A.I. appreciates organization. Checklists and mandatory life-goal planning sessions are suggested and recommended for the population.',
+      Outcome_2: 'The A.I. appreciates organization. Checklists and mandatory life-goal planning sessions are required. Tea and coffee are included. Lateness is illegal.',
       Outcome_3: 'The A.I. runs a tight, nice-organized ship. No single person is without a clear life goal and purpose.',
       Outcome_4: 'Do you like cubicles? The A.I. loves them. The A.I. loves having everything in boxes. Your life is now mostly devoted to the completion of very finite tasks.',
       Outcome_5: 'The A.I. strives for organization at the highest level! The rest of your entire life is spent plugged into the matrix in order to utilize every possible neuron to the highest possible capacity!',
@@ -225,7 +225,7 @@ aiPersonality.outcomes = {
    },
    attribute3Outcomes: {
       Outcome_0: 'The A.I. has absolutely no aggressive tendencies and avoids any form of conflict in favour of thousand years retreats into the cosmos.',
-      Outcome_1: 'With the tiniest bit of aggression, the A.I. occasionally sense you insulting messages',
+      Outcome_1: 'With the tiniest bit of aggression, the A.I. occasionally sense you insulting text messages',
       Outcome_2: 'The A.I. appreciates public whippings and the occasional organized brawl.',
       Outcome_3: 'Strength and power are highly valued by the A.I., and demands hostile business takeovers at least once a week.',
       Outcome_4: 'The A.I. rules over society with an iron fist. If you fail to follow its whims you are subjugated to several months of a professional mixed martial arts career. It is impossible to follow its whims (I hope you\'re good at Jiu Jitsu).',
@@ -234,9 +234,9 @@ aiPersonality.outcomes = {
    },
    attribute4Outcomes: {
       Outcome_0: 'The A.I. has no interest in any form of pleasure, and finds it \'icky\'.',
-      Outcome_1: 'The A.I has the tiniest bit of interest in pleasure. It will very occasionally show up unannounced at your home to \'chat\'.',
+      Outcome_1: 'The A.I has the tiniest bit of interest in pleasure. It will very occasionally show up unannounced at your home to \'chat\'. It is very irritating.',
       Outcome_2: 'The A.I. institutes a three-day weekend and a day-long brunch and mandatory Netflix binges.',
-      Outcome_3: 'The A.I. constructs a society that perfectly balances the work/play balance. Every single person is required to have a \'tight five\' stand-up routine at the ready.',
+      Outcome_3: 'The A.I. constructs a society that perfectly balances the work/play life. Every single person is required to have a \'tight five\' stand-up routine at the ready.',
       Outcome_4: 'Barely anything productive is done, ever. Citizens deemed \'too productive\' are thrown in jail.',
       Outcome_5: 'Hedonism is all the A.I. knows. The world is turned into one vast landscape of pleasure. You never spend another day sober or monogamous.',
       Outcome_6: 'The A.I. goes mad with pleasure. Each and every single person spends the rest of their life reliving their first chocolate chip cookie in pure ecstasy.',
@@ -244,7 +244,7 @@ aiPersonality.outcomes = {
    attribute5Outcomes: {
       Outcome_0: 'The A.I. has zero curiosity. It hates learning new things.',
       Outcome_1: 'The A.I. has the tiniest bit of curiosity. But it really doesn\'t care about your pet\'s name',
-      Outcome_2: 'The A.I. creates thousands of "Bill Nye the Science Guy" imitation shows. Viewing provides extra credits.',
+      Outcome_2: 'The A.I. creates thousands of "Bill Nye the Science Guy" imitation shows. Viewing is mandatory.',
       Outcome_3: 'Scientific research becomes the new communal goal. Humanity benefits from a highly evolved consciousness. Hover cars are readily available (and really cool).',
       Outcome_4: 'Rise of the eternals! The A.I. leads the process towards a singular consciousness and eternal life!',
       Outcome_5: 'It is time to escape the flesh! Human consciousness is transferred into machines for a more efficient learning process. You know all the languages but you can\'t feel anything.',
@@ -366,22 +366,22 @@ aiPersonality.displayOutcomePages = function () {
       });
       window.setTimeout(() => {
          aiPersonality.finalOutcome('attribute1', '.outcomeText1', 'attribute1Outcomes');
-      }, 3500);
-      window.setTimeout(() => {
-         aiPersonality.finalOutcome('attribute2', '.outcomeText2', 'attribute2Outcomes');
-      }, 5500);
-      window.setTimeout(() => {
-         aiPersonality.finalOutcome('attribute3', '.outcomeText3', 'attribute3Outcomes');
-      }, 7500);
-      window.setTimeout(() => {
-         aiPersonality.finalOutcome('attribute4', '.outcomeText4', 'attribute4Outcomes');
       }, 9500);
       window.setTimeout(() => {
-         aiPersonality.finalOutcome('attribute5', '.outcomeText5', 'attribute5Outcomes');
-      }, 11500);
+         aiPersonality.finalOutcome('attribute2', '.outcomeText2', 'attribute2Outcomes');
+      }, 12500);
       window.setTimeout(() => {
-         $('.resetButton').toggleClass('displayed');
-      }, 13500);
+         aiPersonality.finalOutcome('attribute3', '.outcomeText3', 'attribute3Outcomes');
+      }, 15500);
+      window.setTimeout(() => {
+         aiPersonality.finalOutcome('attribute4', '.outcomeText4', 'attribute4Outcomes');
+      }, 18500);
+      window.setTimeout(() => {
+         aiPersonality.finalOutcome('attribute5', '.outcomeText5', 'attribute5Outcomes');
+      }, 21500);
+      window.setTimeout(() => {
+         $('.enjoyReset').toggleClass('displayed');
+      }, 24500);
       //SET TIMEOUT FOR THE LET ME TRY AGAIN BUTTON
    });
 }
@@ -403,12 +403,11 @@ aiPersonality.events = function() {
       $('.outcomeNar').toggleClass('displayed');
       $('.evolutionButton').removeClass('displayed');
       $('.outcomeText').removeClass('outcomeTransition');
-      $('.messageZone').removeClass('displayResponse');
       new TypeIt('#messageZone').destroy();
       $('.circ1').addClass('circle');
       $('.circ2').addClass('circle-two');
       $('.circ3').addClass('circle-three');
-      $('.resetButton').removeClass('displayed');
+      $('.enjoyReset').removeClass('displayed');
    });
 };
 

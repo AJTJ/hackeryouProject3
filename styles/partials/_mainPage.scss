@@ -6,22 +6,24 @@ main {
 }
 
 .mainPageTitle {
-   // min-height: 50px;
    text-align: center;
-   padding: 10px 0 ;
-   font-size: 40px;
-   // line-height: 10px;
+   padding-top: 10px;
+
+   h4 {
+      font-size: 40px;
+   }
+
+   p {
+      font-size: 17px;
+   }
 }
 
 form {
-   // min-height: 500px;
    max-width: 600px;
    margin: 0 auto;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
-   // max-width: 900px;
-   // margin: 0 auto;
 
    .choice {
       display: flex;
@@ -37,7 +39,6 @@ form {
 .imgBox {
    display: block;
    position: relative;
-   // border: $color3 2px solid;
 
    img {
       height: 100%;
