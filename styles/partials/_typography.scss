@@ -4,43 +4,48 @@ $fontHeader:'Orbitron', sans-serif;
 $mainFont:'Share Tech Mono', monospace;
 
 body {
-   font-size: 18px;
+	font-size: 18px;
 }
 
 button {
-   font-size: 16px;
+	font-size: 16px;
 }
 
 p, span, button, div {
-   font-family: $mainFont;
+	font-family: $mainFont;
 }
 
-h1, h2, h3, h4, h5 {
-   margin: 0;
-   font-family: $fontHeader;
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: $fontHeader;
 }
 
 h1 {
-   font-size: 110px;
+	font-size: 70px;
 }
 
 h2 {
-   font-size: 60px;
+	font-size: 60px;
 }
 
 h3 {
-   font-size: 40px;
+	font-size: 40px;
 }
 
 h4 {
-   font-size: 30px;
+	font-size: 30px;
 }
 
 h5 {
-   font-size: 20px;
-   padding: 20px;
+	font-size: 20px;
+	padding: 20px;
+}
+
+h6 {
+	font-size: 20px;
+	display: inline;
 }
 
 p {
-   line-height: 30px;
+	line-height: 30px;
 }

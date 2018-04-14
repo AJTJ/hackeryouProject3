@@ -1,114 +1,109 @@
 @media (max-width: 1025px) {
-   .introPage {
-      h1 {
-         font-size: 100px;
+	.mainPageTitle {
+		h4 {
+			font-size: 30px;
+		}
 
-      }
-   }.mainPageTitle {
-      h4 {
-         font-size: 30px;
-      }
-
-   }
+	}
 }
 
 @media (max-width: 900px) {
-   .outcomePage {
-      .outcomeNar {
-         font-size: 16px;
-      }
-   }
+	.outcomePage {
+		.outcomeNar {
+			font-size: 16px;
+		}
+	}
 }
 
 
 @media (max-width: 850px) {
 
-   .introPage {
-      h1 {
-         font-size: 60px;
+	.introPage {
+		h1 {
+			font-size: 60px;
 
-      }
+		}
 
-      p {
-         padding: 0 10px;
-      }
+		p {
+			padding: 0 10px;
+		}
 
-      .warning {
-         h2 {
-            font-size: 30px;
-         }
-      }
-   }
-   .mainPageTitle {
-      h4 {
-         font-size: 20px;
-      }
-      p {
-         font-size: 14px;
-      }
+		.warning {
+			h2 {
+				font-size: 30px;
+			}
+		}
+	}
+	.mainPageTitle {
+		h4 {
+			font-size: 20px;
+		}
+		p {
+			font-size: 14px;
+		}
 
-   }
-   .outcomePage {
-      .outcomeText {
-         font-size: 16px;
-      }
-   }
+	}
+	.outcomePage {
+		.outcomeText {
+			font-size: 16px;
+		}
+	}
 }
 
 @media (max-width: 650px) {
-   form {
-      max-width: 450px;
-      .choice {
-         width: 80px;
-         height: 80px;
-      }
-   }
-   .mainPageTitle {
-      h4 {
-         font-size: 16px;
-      }
+	form {
+		max-width: 450px;
+		.choice {
+			width: 80px;
+			height: 80px;
+		}
+	}
+	.mainPageTitle {
+		h4 {
+			font-size: 16px;
+		}
 
-   }
+	}
 
-   .messageZoneDiv {
-      flex-direction: column;
+	.messageZoneDiv {
+		flex-direction: column;
 
-      .messageZone {
-         font-size: 15px;
-      }
-   }
+		.messageZone {
+			font-size: 15px;
+		}
+	}
 
-   .outcomePage {
-      .outcomeNarrative {
-         padding-top: 20px;
-      }
-      .outcomeNar {
-         font-size: 15px;
-      }
-      .outcomeText {
-         font-size: 15px;
-      }
-      .outcomeTitle {
-         font-size: 30px;
-      }
-   }
-   
+	.outcomePage {
+		.outcomeNarrative {
+			padding-top: 20px;
+		}
+		.outcomeNar {
+			font-size: 15px;
+		}
+		.outcomeText {
+			font-size: 15px;
+		}
+		.outcomeTitle {
+			font-size: 30px;
+		}
+	}
+	
 
 }
 
 @media (max-width: 575px) {
 
-   .introPage {
-      h1 {
-         font-size: 50px;
-      }
-      .wakeUpTitle {
-         font-size: 60px;
-      }
+	.introPage {
+		h1 {
+			font-size: 50px;
+		}
+		.wakeUpTitle {
+			font-size: 60px;
+		}
 
-      p {
-         font-size: 15px;
-         padding: 5px;
-      }
-   }
+		p {
+			font-size: 15px;
+			padding: 5px;
+		}
+	}
 }

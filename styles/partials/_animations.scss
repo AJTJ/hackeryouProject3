@@ -1,6 +1,6 @@
 @keyframes blurOut {
-   0% { filter: blur(0.5px); }
-   100% { filter: blur(2px); }
+	0% { filter: blur(0.5px); }
+	100% { filter: blur(2px); }
 }
 
 // @keyframes fadeInSlowly {
@@ -18,7 +18,7 @@
 }
 
 .introPage {
-   -webkit-animation: body 5s infinite;
+	-webkit-animation: body 5s infinite;
   background: $color3;
 }
 @-webkit-keyframes one /* Safari and Chrome */
@@ -35,14 +35,14 @@
   background:red;
   opacity: 0.5;
   border-radius:50%;
-  top:40%;
+  top:5%;
   left:50%;
   margin-left: -50px;
   }
 @-webkit-keyframes two /* Safari and Chrome */
 {
 
-100% {background: $color2; opacity: 0;height:700px;width:800px;
+100% {background: red; opacity: 0;height:700px;width:800px;
  top: -webkit-calc(40% - 350px);
 left: -webkit-calc(50% - 400px); }
 }

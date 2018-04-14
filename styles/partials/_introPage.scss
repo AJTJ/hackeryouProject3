@@ -1,72 +1,78 @@
 .introPage {
-   visibility: hidden;
-   background: $color5;
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   z-index: 10;
-   padding: 0 10px;
-   max-height: 100vh;
-   
-   h1 {
-      padding-top: 20px;
-      text-align: center;
-   }
+	visibility: hidden;
+	background: $color5;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	padding: 0 10px;
+	max-height: 100vh;
+	
+	h1 {
+		padding-top: 150px;
+		text-align: center;
+	}
 
-   p {
-      font-size: 20px;
-      line-height: 30px;
-   }
-   .wakeUp {
-      z-index: 25;
-   }
-   .warning {
-      z-index: 25;
-      align-self: flex-start;
-   }
+	p {
+		text-align: left;
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.wakeUp {
+		z-index: 25;
+	}
+	.warning,
+	.warning p {
+		z-index: 25;
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .wakeUpTitle {
-   padding-top: 10px;
-   font-size: 80px;
-   text-align: center;
-   z-index: 25;
+	padding-top: 10px;
+	font-size: 80px;
+	text-align: center;
+	z-index: 25;
 }
 
 .guide,
 .instructions {
-   font-size: 20px;
-   line-height: 30px;
-   text-align: center;
-   padding: 20px;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	padding: 10px;
 }
 
 .introPageTextFlex {
-   max-height: 400px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   margin-top: 20px;
+	max-height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 20px;
 }
 
 .singu {
-   text-decoration: underline;
+	text-decoration: underline;
 }
 
 .drastic {
-   color: yellow;
+	color: yellow;
 }
 
 .three {
-   font-size: 50px;
+	font-size: 50px;
+}
+
+.hideIntro__wrapper {
+	text-align: center;
 }
 
 .hideIntroPage {
-   display: inline-block;
-   max-width: 300px;
-   padding: 20px 50px;
-   margin: 20px;
-   align-self: flex-start;
+	display: inline-block;
+	max-width: 300px;
+	padding: 20px 50px;
+	margin: 20px;
 }

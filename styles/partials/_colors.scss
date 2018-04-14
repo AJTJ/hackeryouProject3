@@ -1,31 +1,31 @@
 $color1: rgba(236, 235, 242, 1);
-$color2: rgb(67, 103, 134);
+$color2: #436786;
 $color3Light: rgb(120, 136, 161);
-$color3: rgba(27, 42, 65, 1);
-$color4: rgba(12, 24, 33, 1);
+$color3: #1b2a41;
+$color4: rgb(7, 13, 19);
 $color5: rgba(0, 0, 0, 1);
 
 $borderColor: $color2;
 $buttonColor: $color3;
 
 body {
-   background-color: $color5;
-   color: $color1;
+	background-color: $color5;
+	color: $color1;
 }
 
 a {
-   color: wheat;
-   text-decoration: none;
+	color: wheat;
+	text-decoration: none;
 
-   &:hover, &:active {
-      color: $color2;
-   }
+	&:hover, &:active {
+		color: $color2;
+	}
 }
 
 span, h1, button {
-   color: $color1;
+	color: $color1;
 }
 
 h2, h3, h4, h5 {
-   color: $color2;
+	color: $color2;
 }

@@ -2,94 +2,90 @@
 // LIGHTBOX FOR CHOICES
 
 .choiceOverlay {
-   visibility: hidden;
-   opacity: 0;
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   right: 0;
-   left: 0;
-   background: rgba(12, 24, 33, 1);
-   transition: all 0.5s;
+	visibility: hidden;
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: $color4;
+	transition: all 0.5s;
 
-   .overlayFlex {
-      display: flex;
-      position: relative;
-      flex-direction: column;
-      align-items: center;
-      border-radius: 500px;
-      width: 600px;
-      height: 600px;
-      z-index: 10;
+	.overlayFlex {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 500px;
+		width: 600px;
+		height: 600px;
+		z-index: 10;
 
-      a,
-      p,
-      button {
-         z-index: 10;
-      }
+		a,
+		p,
+		button {
+			z-index: 10;
+		}
 
-      .overlayImg {
-         position: absolute;
-         top: 0;
-         bottom: 0;
-         right: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-         z-index: 8;
-         border-radius: 500px;
-      }
+		.overlayImg {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: 8;
+			border-radius: 500px;
+		}
 
-      .overlayColor {
-         position: absolute;
-         top: 0;
-         bottom: 0;
-         right: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         z-index: 9;
-      }
+		.overlayColor {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 9;
+		}
 
-      .closeX {
-         position: absolute;
-         color: $color1;
-         top: 5px;
-         right: 5px;
-      }
-      .confirm {
-         padding: 15px 40px;
-         margin: 20px;
-      }
-   }
+		.closeX {
+			position: absolute;
+			color: $color1;
+			top: 5px;
+			right: 5px;
+		}
+		.confirm {
+			padding: 15px 40px;
+			margin: 20px;
+		}
+	}
 
 }
 
 .choiceOverlayText {
-   visibility: hidden;
-   opacity: 0;
-   transition: all 1s;
-   transition-delay: 0.5s;
-   background: rgba(12, 24, 33, 1);
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   z-index: 10;
-   width: 100%;
-   margin-top: 150px;
-   padding: 30px 15px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s;
+	transition-delay: 0.5s;
+	background: $color4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 10;
+	width: 105%;
+	margin-top: 150px;
+	padding: 30px 15px;
 
-   .overlayTitle {
-
-   }
-
-   .overlayMessage {
-      max-width: 375px;
-   }
+	.overlayMessage {
+		max-width: 375px;
+	}
 }
 
 

@@ -2,100 +2,119 @@
 // ALL THE CHOICE IMAGES
 
 main {
-   height: 97vh;
+	height: 97vh;
+		background: linear-gradient(to right, transparent,black 10%, black 90%, transparent);
 }
 
 .mainPageTitle {
-   text-align: center;
-   padding-top: 10px;
+	text-align: center;
+	padding-top: 10px;
 
-   h4 {
-      font-size: 40px;
-   }
+	h4 {
+		font-size: 40px;
+	}
 
-   p {
-      font-size: 17px;
-   }
+	p {
+		font-size: 17px;
+	}
 }
 
 form {
-   max-width: 600px;
-   margin: 0 auto;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
+	max-width: 600px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 
-   .choice {
-      display: flex;
-      justify-content: space-around;
-      position: relative;
-      width: 110px;
-      height: 110px;
-      margin-top: 15px;
-      overflow: hidden;
-   }
+	.choice {
+		display: flex;
+		justify-content: space-around;
+		position: relative;
+		width: 110px;
+		height: 110px;
+		margin-top: 15px;
+		overflow: hidden;
+	}
 }
 
 .imgBox {
-   display: block;
-   position: relative;
+	display: block;
+	position: relative;
 
-   img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-   }
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
 }
 
 .imgOverlay {
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   right: 0;
-   left: 0;
-   background: rgba(0, 0, 0, 0.404);
-   transition: all 1s;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.404);
+	transition: all 0.3s;
+	//TO BE LOOKED AT
+	// box-shadow: 10px 10px 10px 10px $color1;
 
-   &:hover {
-      background: none;
-   }
+	&:hover {
+		background: none;
+	}
 }
 
 .radioButton {
-   display: none;
+	display: none;
 }
 
 // MESSAGES ZONE
 
 .messageZoneDiv {
-   display: flex;
-   min-height: 150px;
-   max-height: 200px;
-   // border-radius: px;
-   margin-top: 20px;
-   // padding: 25px;
-   display: flex;
-   justify-content: space-between;
-   background: $color4;
-   border: 1px solid $color3;
-   box-shadow: 0 0 0 5px $color4;
+	display: flex;
+	min-height: 150px;
+	max-height: 200px;
+	// border-radius: px;
+	margin-top: 20px;
+	// padding: 25px;
+	display: flex;
+	justify-content: space-between;
+	background: $color4;
+	border: 1px solid $color3;
+	box-shadow: 0 0 0 5px $color4;
 }
 
 .messageZone {
-   display: inline-block;
-   margin: 10px;
-   color: $color1;
-   font-size: 18px;
+	display: inline-block;
+	margin: 10px;
+	color: $color1;
+	font-size: 18px;
 }
 
 .aiMessage {
-   display: inline-block;
+	display: inline-block;
 }
 
 .evolutionButton {
-   min-width: 200px;
-   min-height: 50px;
-   visibility: hidden;
-   margin: 10px;
-   padding: 0;
+	min-width: 200px;
+	min-height: 50px;
+	visibility: hidden;
+	margin: 10px;
+	padding: 0;
+}
+
+// MATRIX CANVAS
+// <!--
+//   -_-_-_-_-_-_-_-_-_-_-_-_-_-
+//   matrix background designed 
+//       by\mostafa_shebo 
+//   -_-_-_-_-_-_-_-_-_-_-_-_-_-
+// -->
+canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
 }

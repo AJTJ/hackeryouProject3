@@ -2,53 +2,53 @@
 
 
 .displayed {
-   visibility: visible;
-   opacity: 1;
+	visibility: visible;
+	opacity: 1;
 }
 
 //Choice overlay transition class on main page
 
 .displayedChoice {
-   visibility: visible;
-   opacity: 1;
+	visibility: visible;
+	opacity: 1;
 
-   img {
-      animation: blurOut 1s 1s linear forwards;
-   }
+	img {
+		animation: blurOut 1s 1s linear forwards;
+	}
 
-   .choiceOverlayText {
-      // animation: fadeInSlowly 1s linear forwards;
-      visibility: visible;
-      opacity: 1;
-   }
+	.choiceOverlayText {
+		// animation: fadeInSlowly 1s linear forwards;
+		visibility: visible;
+		opacity: 1;
+	}
 }
 
 //Classes to disable and identify chosen choices and when the max have been achieved.
 
 .disabled {
-   span {
-      background: rgba(0, 0, 0, 0.800);
-      &:hover {
-         background: rgba(0, 0, 0, 0.800);
-      }
-   }
+	span {
+		background: rgba(0, 0, 0, 0.800);
+		&:hover {
+			background: rgba(0, 0, 0, 0.800);
+		}
+	}
 
 }
 
 .selected {
-   span {
-      background: none;
+	span {
+		background: none;
 
-      &:hover {
-         background: none;
-      }
-   }
+		&:hover {
+			background: none;
+		}
+	}
 }
 
 // The transition for the final personality attributes
 
 .outcomeTransition {
-   color: white;
-   opacity: 1;
-   min-width: 100%;
+	color: white;
+	opacity: 1;
+	min-width: 100%;
 }

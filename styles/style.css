@@ -14,6 +14,192 @@ span, h1, button {
 h2, h3, h4, h5 {
   color: #436786; }
 
+tml {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article, aside, footer, header, nav, section {
+  display: block; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+figcaption, figure, main {
+  display: block; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+pre {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; }
+
+b, strong {
+  font-weight: inherit; }
+
+b, strong {
+  font-weight: bolder; }
+
+code, kbd, samp {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -.25em; }
+
+sup {
+  top: -.5em; }
+
+audio, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+img {
+  border-style: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0; }
+
+button, input {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button; }
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+fieldset {
+  padding: .35em .75em .625em; }
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal; }
+
+progress {
+  display: inline-block;
+  vertical-align: baseline; }
+
+textarea {
+  overflow: auto; }
+
+[type=checkbox], [type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0; }
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto; }
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit; }
+
+details, menu {
+  display: block; }
+
+summary {
+  display: list-item; }
+
+canvas {
+  display: inline-block; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
 .wrapper {
   max-width: 1050px;
   margin: 0 auto; }
@@ -45,12 +231,12 @@ button {
 p, span, button, div {
   font-family: "Share Tech Mono", monospace; }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: "Orbitron", sans-serif; }
 
 h1 {
-  font-size: 110px; }
+  font-size: 70px; }
 
 h2 {
   font-size: 60px; }
@@ -64,6 +250,10 @@ h4 {
 h5 {
   font-size: 20px;
   padding: 20px; }
+
+h6 {
+  font-size: 20px;
+  display: inline; }
 
 p {
   line-height: 30px; }
@@ -86,7 +276,7 @@ p {
 
 @-webkit-keyframes body /* Safari and Chrome */ {
   50% {
-    background: #0c1821; } }
+    background: #070d13; } }
 
 .introPage {
   -webkit-animation: body 5s infinite;
@@ -94,7 +284,7 @@ p {
 
 @-webkit-keyframes one /* Safari and Chrome */ {
   50% {
-    background: #0c1821; } }
+    background: #070d13; } }
 
 .circle {
   -webkit-animation: one 4s infinite;
@@ -104,13 +294,13 @@ p {
   background: red;
   opacity: 0.5;
   border-radius: 50%;
-  top: 40%;
+  top: 5%;
   left: 50%;
   margin-left: -50px; }
 
 @-webkit-keyframes two /* Safari and Chrome */ {
   100% {
-    background: #436786;
+    background: red;
     opacity: 0;
     height: 700px;
     width: 800px;
@@ -138,17 +328,19 @@ p {
   padding: 0 10px;
   max-height: 100vh; }
   .introPage h1 {
-    padding-top: 20px;
+    padding-top: 150px;
     text-align: center; }
   .introPage p {
+    text-align: left;
     font-size: 20px;
     line-height: 30px; }
   .introPage .wakeUp {
     z-index: 25; }
-  .introPage .warning {
+  .introPage .warning,
+  .introPage .warning p {
     z-index: 25;
-    -ms-flex-item-align: start;
-        align-self: flex-start; }
+    width: 100%;
+    text-align: center; }
 
 .wakeUpTitle {
   padding-top: 10px;
@@ -161,7 +353,7 @@ p {
   font-size: 20px;
   line-height: 30px;
   text-align: center;
-  padding: 20px; }
+  padding: 10px; }
 
 .introPageTextFlex {
   max-height: 400px;
@@ -186,13 +378,14 @@ p {
 .three {
   font-size: 50px; }
 
+.hideIntro__wrapper {
+  text-align: center; }
+
 .hideIntroPage {
   display: inline-block;
   max-width: 300px;
   padding: 20px 50px;
-  margin: 20px;
-  -ms-flex-item-align: start;
-      align-self: flex-start; }
+  margin: 20px; }
 
 .outcomePage {
   visibility: hidden;
@@ -311,7 +504,11 @@ p {
   padding: 20px; }
 
 main {
-  height: 97vh; }
+  height: 97vh;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(10%, black), color-stop(90%, black), to(transparent));
+  background: -webkit-linear-gradient(left, transparent, black 10%, black 90%, transparent);
+  background: -o-linear-gradient(left, transparent, black 10%, black 90%, transparent);
+  background: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
 
 .mainPageTitle {
   text-align: center;
@@ -360,9 +557,9 @@ form {
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.404);
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s; }
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
   .imgOverlay:hover {
     background: none; }
 
@@ -380,10 +577,10 @@ form {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #0c1821;
+  background: #070d13;
   border: 1px solid #1b2a41;
-  -webkit-box-shadow: 0 0 0 5px #0c1821;
-          box-shadow: 0 0 0 5px #0c1821; }
+  -webkit-box-shadow: 0 0 0 5px #070d13;
+          box-shadow: 0 0 0 5px #070d13; }
 
 .messageZone {
   display: inline-block;
@@ -401,6 +598,14 @@ form {
   margin: 10px;
   padding: 0; }
 
+canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1; }
+
 .choiceOverlay {
   visibility: hidden;
   opacity: 0;
@@ -417,7 +622,7 @@ form {
   bottom: 0;
   right: 0;
   left: 0;
-  background: #0c1821;
+  background: #070d13;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s; }
@@ -480,7 +685,7 @@ form {
   -webkit-transition-delay: 0.5s;
        -o-transition-delay: 0.5s;
           transition-delay: 0.5s;
-  background: #0c1821;
+  background: #070d13;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -492,7 +697,7 @@ form {
       -ms-flex-align: center;
           align-items: center;
   z-index: 10;
-  width: 100%;
+  width: 105%;
   margin-top: 150px;
   padding: 30px 15px; }
   .choiceOverlayText .overlayMessage {
@@ -3036,8 +3241,6 @@ form {
   min-width: 100%; }
 
 @media (max-width: 1025px) {
-  .introPage h1 {
-    font-size: 100px; }
   .mainPageTitle h4 {
     font-size: 30px; } }
 

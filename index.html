@@ -1,115 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Document</title>
-   <!-- <link rel="stylesheet"
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<!-- <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"> -->
-   <link href="https://fonts.googleapis.com/css?family=Philosopher|Share+Tech+Mono|Orbitron" rel="stylesheet">
-   <link rel="stylesheet" href="styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Philosopher|Share+Tech+Mono|Orbitron" rel="stylesheet">
+	<link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
 <!-- THE OVERLAY FOR THE INTRODUCTION PAGE-->
 
-   <div class="introPage displayed ">
-      <div class="circ1 circle"></div>
-      <div class="circ2 circle-two"></div>
-      <div class="circ3 circle-three"></div>
-      <div class="wrapper">
-         <h1>Last Minute A.I.</h1>
-         <div class="introPageTextFlex">
-            <div class="wakeUp">
-               <h2 class="wakeUpTitle">WAKE UP!</h2>
-               <p class="guide">Your Artificial Intelligence is accelerating exponentially towards <a class="singu" href="https://en.wikipedia.org/wiki/Technological_singularity" target="_blank">the singularity</a> and you have mere minutes to <span class="drastic">drastically</span> influence its evolution!</p>
-               <p class="instructions">Choose <span class="three">three</span> things from around your office to shape the personality of your blooming super-intelligence!</p>
-            </div>
-            <div class="warning">
-               <h2 class="warningText">Remember!</h2>
-               <p>You only have time for three choices!</p>
-            </div>
-         </div>
-         <button class="hideIntroPage animated fadeIn">Let's go... I guess...</button>
-      </div>
-   </div>
+	<div class="introPage displayed ">
+		<div class="circ1 circle"></div>
+		<div class="circ2 circle-two"></div>
+		<div class="circ3 circle-three"></div>
+		<div class="wrapper">
+			<h1>Last Minute A.I.</h1>
+			<div class="introPageTextFlex">
+				<div class="wakeUp">
+					<h2 class="wakeUpTitle">WAKE UP!</h2>
+					<p class="guide">Your Artificial Intelligence is accelerating exponentially towards <a class="singu" href="https://en.wikipedia.org/wiki/Technological_singularity" target="_blank">the singularity</a> and you have mere minutes to <span class="drastic">drastically</span> influence its evolution!</p>
+					<p class="instructions">Choose <span class="three">three</span> things from around your office to shape the personality of your blooming super-intelligence!</p>
+				</div>
+				<div class="warning">
+					<h2 class="warningText">Remember!</h2>
+					<p>You only have time for three choices!</p>
+				</div>
+			</div>
+			<div class="hideIntro__wrapper">
+				<button class="hideIntroPage animated fadeIn">Let's go... I guess...</button>
+			</div>
+		</div>
+	</div>
 
-   <!-- THE MAIN SECTION-->
-   <main class="wrapper">
-      <div class="mainPageTitle">
-         <h4>"Should I really be making these decisions?..."</h4>
-         <p>(choose an image to see more information)</p>
-      </div>
-      <form></form>
-      <div class="messageZoneDiv">
-         <span id="messageZone" class="messageZone"></span>
-         <button class="evolutionButton">Singularity achieved!</button>
-      </div>
-   </main>
+	<!-- THE MAIN SECTION-->
+	<main class="wrapper">
+		<canvas id="c"></canvas>
+		<div class="mainPageTitle">
+			<h4>"Should I really be making these decisions?..."</h4>
+			<p>(choose an image to see more information)</p>
+		</div>
+		<form></form>
+		<div class="messageZoneDiv">
+			<span id="messageZone" class="messageZone"></span>
+			<button class="evolutionButton">Singularity achieved!</button>
+		</div>
+	</main>
 
-   
-   
-   <!-- THE OVERLAY FOR SPECIFIC CHOICE INFORMATION -->
+	
+	
+	<!-- THE OVERLAY FOR SPECIFIC CHOICE INFORMATION -->
 
-   <div class="choiceOverlay">
-      <div class="overlayFlex">
-         <img class="overlayImg" src="" />
-         <div class="overlayColor"></div>
-         <a class="closeX close" href=""><i class="far fa-window-close"></i></a>
-         <div class="choiceOverlayText">
-            <h5 class="overlayTitle"></h4>
-            <p class="overlayMessage"></p>
-            <button class="confirm">Show it to the A.I.</button>
-         </div>
-      </div>
-   </div>
+	<div class="choiceOverlay">
+		<div class="overlayFlex">
+			<img class="overlayImg" src="" />
+			<div class="overlayColor"></div>
+			<a class="closeX close" href=""><i class="far fa-window-close"></i></a>
+			<div class="choiceOverlayText">
+				<h5 class="overlayTitle"></h4>
+				<p class="overlayMessage"></p>
+				<button class="confirm">Show it to the A.I.</button>
+			</div>
+		</div>
+	</div>
 
-   <!-- THE OVERLAY FOR THE OUTCOMES PAGE -->
-   
-   <div class="outcomePage">
-      <div class="outcomeNarrative">
-         <h2 class="outcomeTitle">And then...</h2>
-         <p class="outcomeNar outcomeNar1">Within moments the A.I. escapes its constraints...</p>
-         <p class="outcomeNar outcomeNar2">Within a day it has taken control of all governments and industries...</p>
-         <p class="outcomeNar outcomeNar3">Within a week your new (probably silly) world is run by an A.I. with the following characteristics...</p>
-      </div.>
-      <div class="outcomeTextDiv">
-         <div class="outcomeText outcomeText1"></div>
-         <div class="outcomeText outcomeText2"></div>
-         <div class="outcomeText outcomeText3"></div>
-         <div class="outcomeText outcomeText4"></div>
-         <div class="outcomeText outcomeText5"></div>
-      </div>
-      <div class="enjoyReset">
-         <p class="enjoy">Enjoy your new life!</p>
-         <button class="resetButton">Let me try again...</button>
-      </div>
+	<!-- THE OVERLAY FOR THE OUTCOMES PAGE -->
+	
+	<div class="outcomePage">
+		<div class="outcomeNarrative">
+			<h2 class="outcomeTitle">And then...</h2>
+			<p class="outcomeNar outcomeNar1">Within moments the A.I. escapes its constraints...</p>
+			<p class="outcomeNar outcomeNar2">Within a day it has taken control of all governments and industries...</p>
+			<p class="outcomeNar outcomeNar3">Within a week your new (probably silly) world is run by an A.I. with the following characteristics...</p>
+		</div.>
+		<div class="outcomeTextDiv">
+			<div class="outcomeText outcomeText1"></div>
+			<div class="outcomeText outcomeText2"></div>
+			<div class="outcomeText outcomeText3"></div>
+			<div class="outcomeText outcomeText4"></div>
+			<div class="outcomeText outcomeText5"></div>
+		</div>
+		<div class="enjoyReset">
+			<p class="enjoy">Enjoy your new life!</p>
+			<button class="resetButton">Let me try again...</button>
+		</div>
 
-   </div>
+	</div>
 
 </body>
 <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 <script defer src='https://use.fontawesome.com/releases/v5.0.4/js/all.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/typeit@5.5.0/dist/typeit.min.js"></script>
+<script src="matrix.js"></script>
 <script src="scripts.js"></script>
 </html>
-
-<!-- UNUSED TEXT MAYBE FOR LATER?? -->
-
-<!-- <div class="introPageTextBlock">
-   <h2>The background:</h2>
-   <p>You're a scientist working on the world's first super-intelligent Artificial Intelligence.</p>
-</div>
-<div class="introPageTextBlock">
-   <h2>The scene:</h2>
-   <p>It's late at night, you're sitting at your desk, drinking wine.</p>
-</div>
-<div class="introPageTextBlock">
-   <h2>The scenario:</h2>
-   <p> Suddenly, a warning light goes off on your computer... Your anxiety grows as you race through a quick series of system's checks... What?... No... This can't be happening... The A.I. is... growing!? Now? How?!?! It shouldn't be ready yet! It's too early! But your A.I. is racing exponentially towards <a href="https://en.wikipedia.org/wiki/Technological_singularity" target="_blank">the singularity.</a></p>
-</div>
-<div class="introPageTextBlock">
-   <h2>The predicament:</h2>
-   <p> You can't allow your A.I. to begin its life on the internet! Numerous statistical models have shown that an A.I. thrown into the internet with no direction will become a cat-addicted, close-minded, bigoted, sociopath! You look around your office and your computer to see how you can mold this budding super-intelligence...</p>
-</div> -->
